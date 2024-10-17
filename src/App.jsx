@@ -18,33 +18,38 @@ function App() {
     setParticipantes([...participantes,participante])
   }
 
-  /*
+  
   function borrarParticipante(id){
     setParticipantes(participantes.filter( participante => participante.id != id))
   }
 
-  function actualizarParticipante(id,nombre,apellidos,email,telefono,perro,raza,carrera){
+  function actualizarParticipante(id,texto){
     setParticipantes(participantes.map( participante => {
       if(participante.id == id){
-        participante.nombre = nombre
-        participante.apellidos = apellidos
-        participante.email = email
-        participante.telefono = telefono
-        participante.perro = perro
-        participante.raza = raza
-        participante.carrera = carrera
+        participante.nombre = texto
       }
       return participante
      }))
   }
-  */
 
   return (
     <>
     <Formulario agregarParticipante={agregarParticipante} />
-    <ul>
-      { participantes.map( ({id,nombre,apellidos,email,telefono,perro,raza,carrera}) => < Participante key={id} id={id} nombre={nombre} apellidos={apellidos} email={email} telefono={telefono} perro={perro} raza={raza} carrera={carrera} /> )}
-    </ul>
+    <section className="participantes">
+      { participantes.map( ({id,nombre,apellidos,email,telefono,perro,raza,carrera}) => < Participante
+                                                                                          key={id}
+                                                                                          id={id}
+                                                                                          nombre={nombre}
+                                                                                          apellidos={apellidos}
+                                                                                          email={email}
+                                                                                          telefono={telefono}
+                                                                                          perro={perro}
+                                                                                          raza={raza}
+                                                                                          carrera={carrera}
+                                                                                          actualizarParticipante={actualizarParticipante}
+                                                                                          borrarParticipante={borrarParticipante}
+                                                                                           /> )}
+    </section>
     </>
   )
 }

@@ -66,33 +66,50 @@ function Formulario({agregarParticipante}){
                             console.log("error en el registro de datos - revisa que todos los datos sean correctos")
                         }
                     } }>
-                        <span>Nombre</span><input type="text" placeholder="Nombre (primera letra en Mayúsculas)" value={textoTemporalNombre} onChange={ evento => setTextoTemporalNombre(evento.target.value) }></input>
-                        <span>Apellidos</span><input type="text" placeholder="Apellidos (primera letra en Mayúsculas)" value={textoTemporalApellidos} onChange={ evento => setTextoTemporalApellidos(evento.target.value) }></input>
-                        <span>email</span><input type="text" placeholder="email" value={textoTemporalEmail} onChange={ evento => setTextoTemporalEmail(evento.target.value) }></input>
-                        <span>teléfono</span><input type="text" placeholder="teléfono (nueve dígitos)" value={textoTemporalTelefono} onChange={ evento => setTextoTemporalTelefono(evento.target.value) }></input>
-                        <span>Nombre perro/a</span><input type="text" placeholder="Nombre Perro/a (primera en Mayúsculas)" value={textoTemporalNombrePerro} onChange={ evento => setTextoTemporalNombrePerro(evento.target.value) }></input>
-                        <span>Raza</span>
-                        <select nombre="raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value) }>
-                            <option value="-"></option>
-                            <option value="Pastor Alemán">Pastor Alemán</option>
-                            <option value="Galgo">Galgo</option>
-                            <option value="Setter Inglés">Setter inglés</option>
-                            <option value="Labrador Retriever">Labrador Retriever</option>
-                            <option value="Golden Retriever">Golden Retriever</option>
-                            <option value="Pit Bull">Pit Bull</option>
-                            <option value="Beagle">Beagle</option>
-                            <option value="Dalmata">Dálmata</option>
-                            <option value="Perro Agua">Perro de Agua</option>
-                            <option value="Border Collie">Border Collie</option>
-                        </select>
-                        <input type="text" placeholder="Otra Raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value)}/>
-                        <div className="carrera">
-                            <label htmlFor="carrera_corta" className="corta">carrera corta - 7 km.</label>
-                            <input type="radio" name="carrera" value="corta" onChange={ evento => setInputCarrera(evento.target.value) } id="carrera_corta" />
+                        <div>
+                            <span>Nombre</span>
+                            <input type="text" placeholder="Nombre (primera letra en Mayúsculas)" value={textoTemporalNombre} onChange={ evento => setTextoTemporalNombre(evento.target.value) }></input>
                         </div>
+                        <div>
+                            <span>Apellidos</span>
+                            <input type="text" placeholder="Apellidos (primera letra en Mayúsculas)" value={textoTemporalApellidos} onChange={ evento => setTextoTemporalApellidos(evento.target.value) }></input>
+                        </div>
+                        <div>
+                            <span>email</span>
+                            <input type="text" placeholder="email" value={textoTemporalEmail} onChange={ evento => setTextoTemporalEmail(evento.target.value) }></input>
+                        </div>
+                        <div>
+                            <span>teléfono</span>
+                            <input type="text" placeholder="teléfono (nueve dígitos)" value={textoTemporalTelefono} onChange={ evento => setTextoTemporalTelefono(evento.target.value) }></input>
+                        </div>
+                        <div>
+                            <span>Nombre perro/a</span>
+                            <input type="text" placeholder="Nombre Perro/a (primera letra en Mayúsculas)" value={textoTemporalNombrePerro} onChange={ evento => setTextoTemporalNombrePerro(evento.target.value) }></input>
+                        </div>
+                        <div>
+                            <span>Raza</span>
+                            <select nombre="raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value) }>
+                                <option value="-"></option>
+                                <option value="Pastor Alemán">Pastor Alemán</option>
+                                <option value="Galgo">Galgo</option>
+                                <option value="Setter Inglés">Setter inglés</option>
+                                <option value="Labrador Retriever">Labrador Retriever</option>
+                                <option value="Golden Retriever">Golden Retriever</option>
+                                <option value="Pit Bull">Pit Bull</option>
+                                <option value="Beagle">Beagle</option>
+                                <option value="Dalmata">Dálmata</option>
+                                <option value="Perro Agua">Perro de Agua</option>
+                                <option value="Border Collie">Border Collie</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Otra Raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value)}/>
                         <div className="carrera">
+                        </div>
+                            <label htmlFor="carrera_corta" className="corta">carrera corta - 7 km.</label>
+                                <input type="radio" name="carrera" value="corta" onChange={ evento => setInputCarrera(evento.target.value) } id="carrera_corta" />
                             <label htmlFor="carrera_larga">carrera larga - 15 km.</label>
-                            <input type="radio" name="carrera" value="larga" onChange={ evento => setInputCarrera(evento.target.value) } id="carrera_larga" />
+                                <input type="radio" name="carrera" value="larga" onChange={ evento => setInputCarrera(evento.target.value) } id="carrera_larga" />
                         </div>
                         <input className="inscribirse" type="submit" value="· INSCRIBIRSE ·"/>
             </form>)
