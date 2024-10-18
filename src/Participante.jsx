@@ -46,7 +46,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                 setEditandoNombre(true)
                                         }     
                                         } }
-                                >{ editandoNombre ? "guardar" : "editar" }</button>
+                                >{ editandoNombre ? <i className="fa-regular fa-floppy-disk"></i> : <i className="fa-regular fa-pen-to-square"></i> }</button>
                 </div>
                 <div className="nombre_perro">
                         <h2 className={ !editandoPerro ? "visible" : ""}>{ perro }</h2>
@@ -81,7 +81,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                 setEditandoPerro(true)
                                         }     
                                         } }
-                                >{ editandoPerro ? "guardar" : "editar" }</button>
+                                >{ editandoPerro ? <i className="fa-regular fa-floppy-disk"></i> : <i className="fa-regular fa-pen-to-square"></i> }</button>
                 </div>
                 <button className="boton_borrar"
                         onClick={ () => {
@@ -97,7 +97,11 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                         console.log("...error al borrar participante")
                                 })
                         } }
-                >borrar</button>
+                        >
+                        <span>borrar</span>
+                        <i class="fa-regular fa-trash-can"></i>
+                </button>
+
         </section>)
 }
 

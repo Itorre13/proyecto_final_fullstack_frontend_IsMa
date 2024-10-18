@@ -41,26 +41,49 @@ h1{
 ul{
   list-style: none;
 }
-.formulario{
-  background:url("../public/background.png") no-repeat center;
+.datos{
+  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url("../public/background.png");
   background-size: cover;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding:50px;
-  border-bottom:2px dashed #4D4D4D;
 }
-.formulario div{
+.datos_persona{
+  margin:20px auto 0px;
+  display: flex;
   justify-content: center;
-  width: calc(100% -25px);
-  padding-right: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.datos_persona div{
+  padding: 5px;
+}
+.datos_perro{
+  margin:20px auto 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.datos_perro div{
+  padding: 5px;
+  width: 380px;
+}
+.datos_perro select{
+  width: 89%;
 }
 .carrera{
-  margin-top: 20px;
+  margin:20px auto 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #4D4D4D;
+  border-radius:10px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.3);
 }
 .carrera input{
   display:flex;
@@ -69,18 +92,19 @@ ul{
   margin-left: 10px;
 }
 .carrera :nth-child(3){
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 2px dashed #4D4D4D;
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 3px solid #4D4D4D;
 }
 input,button,select{
-  width: calc(100% - 35px);
-  margin: 10px;
   display:block;
   font-family:sans-serif;
   cursor:pointer;
   border-radius:10px;
   padding:5px;
+}
+button{
+  border-radius:5px;
 }
 form span, form label{
   font-size: 1rem;
@@ -91,22 +115,37 @@ form label{
   font-size: 1.2rem;
 }
 input[type="text"]{
+  width: 80%;
   font-family: sans-serif;
   margin-bottom:5px;
   border-radius:10px;
   padding:15px;
 }
-form input[type="submit"]{
-  background-color: #4D4D4D;
+input[type="submit"]{
+  background-color: #393F0F;
   color: white;
   border-radius:10px;
   padding:15px;
-  margin: 15px 0 15px;
+  margin: 20px auto 20px;
+  width: 400px;
+  font-family: "Bungee", sans-serif;
+  font-size: 1.2rem;
 }
-form input[type="submit"].inscribirse:hover{
+input[type="submit"]:hover{
   background-color: white;
   color:#4D4D4D;
   font-weight: 800;
+}
+.logo{
+  width: 300px;
+  height: 200px;
+  background:url("../public/icon.svg") no-repeat center;
+  background-size: cover;
+}
+.lista_participantes h2{
+  text-align: center;
+  margin: 20px auto 20px;
+  color:#4D4D4D;
 }
 .participantes{
   display:flex;
@@ -158,11 +197,26 @@ form input[type="submit"].inscribirse:hover{
   color:white;
 }
 .boton_borrar{
-  border:0.5px solid #4D4D4D;
+  width:22px;
+  height:25px;
+  border:0.5px solid white;
   color: white;
   background-color: #4D4D4D;
 }
-.boton_borrar:hover{
+.boton_borrar span{
+  font-family: "Bungee", sans-serif;
   color: #4D4D4D;
-  background-color: white;
+  position:relative;
+  left:1.2rem;
+  top:0;
+  opacity:0;
+}
+.fa-trash-can{
+  color:white;
+  position:relative;
+  left:0;
+  top:-18px;
+}
+.boton_borrar:hover span{
+  opacity:1;
 }
