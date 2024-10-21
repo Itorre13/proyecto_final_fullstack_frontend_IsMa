@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.47 178.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6a7624;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #848c30;
+      }
+
+      .cls-3 {
+        fill: #393f0f;
+      }
+
+      .cls-4 {
+        fill: #a1a150;
+      }
+    </style>
+  </defs>
+  <g id="triangulos">
+    <g>
+      <rect class="cls-4" x="20.23" width="39.01" height="138.65"/>
+      <polygon class="cls-3" points="79.47 138.65 39.74 178.39 0 138.65 79.47 138.65"/>
+      <polygon class="cls-3" points="20.23 0 59.24 0 48.16 31.49 20.23 0"/>
+      <polygon class="cls-2" points="20.19 61.33 20.23 0 48.16 31.49 20.19 61.33"/>
+      <polyline class="cls-1" points="59.24 0 59.24 56.16 48.16 31.49"/>
+      <polygon class="cls-3" points="59.24 91.97 35.7 44.89 59.22 56.15 59.24 91.97"/>
+      <polygon class="cls-3" points="20.19 94.47 35.7 44.89 20.19 61.33 20.19 94.47"/>
+      <polygon class="cls-1" points="40.17 104.58 45.34 64.39 20.19 94.47 40.17 104.58"/>
+      <polygon class="cls-2" points="40.17 104.58 59.24 91.97 45.34 64.39 40.17 104.58"/>
+      <polygon class="cls-2" points="33.23 120.8 20.19 94.47 20.19 113.68 33.23 120.8"/>
+      <polygon class="cls-3" points="33.23 120.8 40.17 104.58 20.19 94.47 33.23 120.8"/>
+      <polyline class="cls-1" points="20.22 126.9 59.09 134.83 20.19 113.68"/>
+      <polygon class="cls-2" points="46.7 128.09 40.17 104.58 33.23 120.8 46.7 128.09"/>
+      <polygon class="cls-3" points="59.17 120.96 46.7 128.09 59.09 134.83 59.17 120.96"/>
+      <polygon class="cls-3" points="20.2 138.67 34.49 129.82 20.22 126.9 20.2 138.67"/>
+      <polygon class="cls-2" points="20.16 138.68 46.33 138.64 34.49 129.82 20.16 138.68"/>
+      <polygon class="cls-3" points="59.27 138.68 59.27 134.83 34.49 129.82 59.27 138.68"/>
+      <polygon class="cls-3" points="40.17 104.58 59.11 101.35 59.11 91.97 40.17 104.58"/>
+      <polygon class="cls-4" points="58.97 109.65 46.7 128.09 59.17 120.96 58.97 109.65"/>
+      <polygon class="cls-1" points="40.17 104.58 46.7 128.09 58.97 109.65 40.17 104.58"/>
+    </g>
+  </g>
+</svg>

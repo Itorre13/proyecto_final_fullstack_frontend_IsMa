@@ -36,7 +36,9 @@ function App() {
     <>
     <Formulario agregarParticipante={agregarParticipante} />
     <div className="lista_participantes">
+        <div className="arrow_1"></div>
         <h2>Lista Participantes</h2>
+        <div className="arrow_2"></div>
     </div>
     <section className="participantes">      
       { participantes.map( ({id,nombre,apellidos,email,telefono,perro,raza,carrera}) => < Participante

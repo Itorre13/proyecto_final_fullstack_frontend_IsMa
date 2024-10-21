@@ -15,7 +15,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
     return(<section className="participante">
                 <div className="nombre_participante">
                         <h2 className={ !editandoNombre ? "visible" : ""}>{ nombre } { apellidos}</h2>
-                        <h2 className={ !editandoNombre ? "visible" : ""}>email: { email } / teléfono: { telefono }</h2>
+                        <h3 className={ !editandoNombre ? "visible" : ""}>email: { email } <b>/</b> teléfono: { telefono }</h3>
                         <input  className={ editandoNombre ? "visible" : ""} type="text"
                                         value={ textoTemporalNombre }
                                         onChange= { evento => setTextoTemporalNombre(evento.target.value) } />
@@ -46,18 +46,18 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                 setEditandoNombre(true)
                                         }     
                                         } }
-                                >{ editandoNombre ? <i className="fa-regular fa-floppy-disk"></i> : <i className="fa-regular fa-pen-to-square"></i> }</button>
+                                >{ editandoNombre ? <i className="fa-regular fa-floppy-disk"><span>guardar</span></i> : <i className="fa-regular fa-pen-to-square"><span>editar</span></i> }</button>
                 </div>
                 <div className="nombre_perro">
                         <h2 className={ !editandoPerro ? "visible" : ""}>{ perro }</h2>
-                        <h2 className={ !editandoPerro ? "visible" : ""}>Raza:{ raza } / Carrera:{ carrera }</h2>
+                        <h3 className={ !editandoPerro ? "visible" : ""}>Raza: { raza } <b>/</b> Carrera:{ carrera }</h3>
                         <input  className={ editandoPerro ? "visible" : ""} type="text"
-                                        value={ textoTemporalNombre }
-                                        onChange= { evento => setTextoTemporalNombre(evento.target.value) } />
+                                        value={ textoTemporalNombrePerro }
+                                        onChange= { evento => setTextoTemporalNombrePerro(evento.target.value) } />
                         <button className="boton"
                                         onClick={ () => {
                                         if(editandoPerro){
-                                                if(textoTemporalNombre.trim() != "" && textoTemporalNombre.trim() != nombre){
+                                                if(textoTemporalNombrePerro.trim() != "" && textoTemporalNombrePerro.trim() != nombre){
                                                         return fetch("http://localhost:4000/participantes/actualizar/participante/" + id, {
                                                                 method : "PUT",
                                                                 body : JSON.stringify({ nombre : textoTemporalNombre.trim() }),
@@ -68,8 +68,8 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                         .then(respuesta => respuesta.json())
                                                         .then(({error,resultado}) => {
                                                                 if(!error && resultado == "ok"){
-                                                                        actualizarParticipante(id,textoTemporalNombre.trim())
-                                                                        setTextoTemporalNombre(textoTemporalNombre.trim())
+                                                                        actualizarParticipante(id,textoTemporalNombrePerro.trim())
+                                                                        setTextoTemporalNombre(textoTemporalNombrePerro.trim())
                                                                         return setEditandoPerro(false)
                                                                 }
                                                                 console.log("...error al actualizar participante")
@@ -81,7 +81,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                 setEditandoPerro(true)
                                         }     
                                         } }
-                                >{ editandoPerro ? <i className="fa-regular fa-floppy-disk"></i> : <i className="fa-regular fa-pen-to-square"></i> }</button>
+                                >{ editandoPerro ? <i style="color: white" className="fa-regular fa-floppy-disk"><span>guardar</span></i> : <i className="fa-regular fa-pen-to-square"><span>editar</span></i> }</button>
                 </div>
                 <button className="boton_borrar"
                         onClick={ () => {

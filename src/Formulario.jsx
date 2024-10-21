@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Participante from './Participante.jsx'
+import { Link } from 'react-router-dom';
 
 function Formulario({agregarParticipante}){
 
@@ -23,7 +24,8 @@ function Formulario({agregarParticipante}){
     let regexNombrePerro = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
     let regexRaza = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
 
-    return (<form className="datos" onSubmit={ evento => {
+    return (<>
+            <form className="datos" onSubmit={ evento => {
                         evento.preventDefault()
 
                         if(regexNombre.test(textoTemporalNombre) != "" && regexApellidos.test(textoTemporalApellidos) != "" && regexEmail.test(textoTemporalEmail) != "" && regexTelefono.test(textoTemporalTelefono) != "" && regexNombrePerro.test(textoTemporalNombrePerro) != "" && regexRaza.test(textoTemporalRaza) != ""){
@@ -114,8 +116,13 @@ function Formulario({agregarParticipante}){
                                 <input type="radio" name="carrera" value="larga" onChange={ evento => setInputCarrera(evento.target.value) } id="carrera_larga" />
                         </section>
                         <input className="inscribirse" type="submit" value="INSCRIBIRSE"/>
-                        <div className="logo"></div>
-            </form>)
+                        <Link to="/"><div className="logo"></div></Link>
+            </form>
+            <div className="copyright">
+                <i className="fa-regular fa-copyright"></i>
+                <h3>2024 · Canicross-Entresierras</h3>
+            </div>
+            </>)
 }
 
 export default Formulario
