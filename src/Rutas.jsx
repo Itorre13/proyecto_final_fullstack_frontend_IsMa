@@ -1,21 +1,29 @@
+import Footer from './Footer';
+import Header from './Header';
+
 function Rutas() {
     return(<>
         <a href="/"><div className="logo_inicio_pages"></div></a>
-            <section className="rutas">
-                <h2>Rutas</h2>
-                <div className="ruta">
-                    <h3>Ruta 1</h3>
-                    <h3>7 km</h3>
+        <section className="background">
+        <Header />
+            <div className="rutas">
+                <div>
+                    <h3>Ruta<br/>· 7 km ·</h3>
                 </div>
                 <div className="ruta">
-                    <h3>Ruta 2</h3>
-                    <h3>15 km</h3>
+                <div className="mapa_ruta_corta"></div>
+                    <div className="perfil_ruta_corta"></div>
                 </div>
-                <div className="copyright">
-                    <i className="fa-regular fa-copyright"></i>
-                    <h3>2024 · Canicross-Entresierras</h3>
+                <div>
+                <h3>Ruta<br/>· 15 km ·</h3>
                 </div>
-            </section>
+                <div className="ruta">
+                    <div className="mapa_ruta_larga"></div>
+                    <div className="perfil_ruta_larga"></div>
+                </div>
+            </div>
+        </section>
+            <Footer />
     </>)
 }
 export default Rutas

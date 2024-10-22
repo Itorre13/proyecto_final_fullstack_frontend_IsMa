@@ -6,19 +6,27 @@
 }
 body{
   font-family: "Bungee", sans-serif;
+  font-weight:200;
+}
+a{
+  text-decoration:none;
+}
+ul{
+  list-style: none;
 }
 
 /* ESTILOS PÁGINA INICIO */
 
-.inicio{
-  height:100vh;
-  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)),url("../public/background_triangles.jpg");
-  background-size:cover;
+.background{
+  width: 100%;
+  min-height:100vh;
+  background: url("../public/background_triangles.jpg") no-repeat center;
+  background-size: cover;
 }
 .enlaces_inicio{
   width: 100%;
   height: 100vh;
-  font-size: 1.5rem;
+  font-size: 3rem;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -27,16 +35,16 @@ body{
 }
 .enlace_inicio{
   background-color: #393F0F;
-  padding: 8px;
+  padding: 15px;
+  z-index:3;
 }
 .enlace_inicio a{
-  text-decoration: none;
   color:white;
   cursor: pointer;
 }
 .logo_inicio{
   width:75%;
-  height:250px;
+  height:400px;
   position: fixed;
   top:5vh;
   left:10%;
@@ -50,13 +58,46 @@ body{
   }
   100%{
     transform: translateX(0%)
-
   }
+}
+/* ESTILOS HEADER */
+
+.enlaces_header{
+  width: 100%;
+  display:flex;
+  justify-content: space-around;
+  border-bottom: 10px solid white;
+  margin-bottom: 50px;
+}
+.enlace_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10px auto 10px;
+  width: 150px;
+  background-color: #393F0F;
+  padding: 20px;
+  z-index:3;
+}
+.enlaces_header a{
+  color:white;
+  font-size: 1.2rem;
+}
+.logo_inicio_pages{
+  width:100%;
+  height:100px;
+  position: absolute;
+  top:10px;
+  left:2%;
+  background:url("../public/logo_canicross_1.svg") no-repeat center;
+  background-size: auto;
+  animation: FromLeft 1s ease;
+  cursor:pointer;
 }
 
 /* ESTILOS FOOTER */
 
-.copyright{
+.footer{
   font-family: sans-serif;
   color:white;
   width: 100%;
@@ -64,22 +105,27 @@ body{
   background-color: #393F0F;
   position:fixed;
   bottom: 0px;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content: space-around;
   align-items: center;
 }
-.copyright h3, .fa-copyright{
+.footer div{
+  display:flex;
+}
+.footer h3, .footer .fa-regular{
   padding: 2px;
   font-size: 0.8rem;
-  display: flex;
+  display:flex;
   justify-content: center;
 }
 
 /* ESTILOS FORMULARIO/INSCRIPCIONES */
 
-.datos{
-  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url("../public/background_triangles.jpg");
+.background_datos{
+  background: url("../public/background_triangles.jpg") no-repeat center;
   background-size: cover;
+}
+.datos{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -321,36 +367,216 @@ input[type="submit"]:hover{
 
 /* ESTILO PÁGINAS INTERNAS */
 
-.logo_inicio_pages{
-  width:25%;
-  height:60px;
-  position: fixed;
-  top:3vh;
-  left:2%;
-  background:url("../public/logo_canicross_2.svg") no-repeat center;
-  background-size: auto;
-  animation: FromLeft 1s ease;
-  cursor:pointer;
-}
-.rutas, .contacto{
+.rutas{
   color:#393F0F;
   padding-top: 50px;
-  background-image:linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)),url("../public/background_triangles.jpg");
-  background-size: cover;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.rutas h3{
+  text-align: center;
+  border-top: 5px solid #393F0F;
+  margin-top: 20px;
+  font-size: 4rem;
+}
+.ruta{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin:15px auto 50px;
   flex-wrap: wrap;
 }
-.ruta, .mail, .phone{
-  width: 50%;
-  margin:50px auto 50px;
-  padding: 10px;
-  border:1px solid #393F0F;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+.mapa_ruta_corta{
+  width: 600px;
+  height: 388px;
+  background:url("../public/route_7km.jpg") no-repeat center;
+  background-size: cover;
+  border: 5px solid #393F0F;
+}
+.perfil_ruta_corta{
+  width: 600px;
+  height: 388px;
+  background:url("../public/route_profile_7km.jpg") no-repeat center;
+  background-size: cover;
+  border: 5px solid #393F0F;
+  margin-left: 25px;
+}
+.mapa_ruta_larga{
+  width: 600px;
+  height: 388px;
+  background:url("../public/route_15km.jpg") no-repeat center;
+  background-size: cover;
+  border: 5px solid #393F0F;
+}
+.perfil_ruta_larga{
+  width: 600px;
+  height: 388px;
+  background:url("../public/route_profile_15km.jpg") no-repeat center;
+  background-size: cover;
+  border: 5px solid #393F0F;
+  margin-left: 25px;
 }
 
+/* MEDIAQUERIES - ESTILOS RESPONSIVE
+
+/* ESTILOS PANTALLAS HASTA 1.301px */
+ 
+ @media screen and (max-width:1301px){
+  .enlace_header{
+    width: 180px;
+    padding: 10px;
+  }
+  .enlaces_header a{
+    font-size: 01.2rem;
+  }
+  .logo_inicio_pages{
+    height:70px;
+    top:7px;
+    left:0px;
+  }
+  .carrera{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .carrera input{
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+  .carrera :nth-child(3){
+    margin-top:10px;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: 0px;
+    border-top: 3px solid #4D4D4D;
+  }
+  .ruta{
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .rutas h3{
+    font-size: 2rem;
+  }
+  .mapa_ruta_corta, .mapa_ruta_larga, .perfil_ruta_corta, .perfil_ruta_larga{
+    width: 450px;
+    height: 291px;
+  }
+  .perfil_ruta_corta, .perfil_ruta_larga{
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+}
+
+/* ESTILOS PANTALLAS HASTA 801px */
+
+ @media screen and (max-width:801px){
+  .enlaces_inicio{
+    font-size: 2rem;
+  }
+  .enlace_header{
+    width: 100px;
+    padding: 10px;
+  }
+  .enlaces_header a{
+    font-size: 0.8rem;
+  }
+  .logo_inicio_pages{
+    height:50px;
+    top:10px;
+    left:0px;
+  }
+  .lista_participantes{
+    align-items: center;
+    margin:10px 50px 10px;
+  }
+  .rutas h3{
+    font-size: 2rem;
+  }
+  .mapa_ruta_corta, .mapa_ruta_larga, .perfil_ruta_corta, .perfil_ruta_larga{
+    width: 450px;
+    height: 291px;
+  }
+  .perfil_ruta_larga{
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+}
+
+/* ESTILOS PANTALLAS HASTA 501px */
+
+ @media screen and (max-width:501px){
+  .enlaces_inicio{
+    width: 100%;
+    height: 100vh;
+    font-size: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .enlace_inicio{
+    margin-top: 50px;
+  }
+  .enlace_header{
+    width: 70px;
+    padding: 10px;
+  }
+  .enlaces_header a{
+    font-size: 0.7rem;
+  }
+  .logo_inicio_pages{
+    height:35px;
+    top:18px;
+    left:0px;
+  }
+  .lista_participantes{
+    align-items: center;
+    margin:10px 20px 10px;
+  }
+  .lista_participantes h2{
+    font-size: 1rem;
+  }
+  .arrow_1{
+    height:3rem;
+    width:3rem;
+    background:url("../public/arrow.svg") no-repeat center;
+    background-size: contain;
+  }
+  .arrow_2{
+    height:3rem;
+    width:3rem;
+    background:url("../public/arrow.svg") no-repeat center;
+    background-size: contain;
+  }
+  .footer{
+    height: 7vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .footer h3, .footer .fa-regular{
+    font-size: 0.6rem;
+  }
+  .footer div:nth-child(1){
+    order:1;
+  }
+  .footer div:nth-child(3){
+    order:2;
+  }
+  .rutas h3{
+    font-size: 2rem;
+  }
+  .mapa_ruta_corta, .mapa_ruta_larga, .perfil_ruta_corta, .perfil_ruta_larga{
+    width: 350px;
+    height: 226px;
+  }
+  .perfil_ruta_larga{
+    margin-top: 15px;
+  }
+}
