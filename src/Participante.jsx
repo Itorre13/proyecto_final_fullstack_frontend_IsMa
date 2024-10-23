@@ -99,7 +99,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                         } }
                         >
                         <span>borrar</span>
-                        <i class="fa-regular fa-trash-can"></i>
+                        <i className="fa-regular fa-trash-can"></i>
                 </button>
 
         </section>)

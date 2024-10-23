@@ -1,12 +1,16 @@
 import { useState } from 'react';
-import Participante from './Participante.jsx'
+import Participante from './Participante.jsx';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header.jsx';
 
 function Formulario({agregarParticipante}){
 
-    const input = document.querySelectorAll("input");
+    const input = document.querySelectorAll("input")
+
+    const datosEnviados = document.querySelector(".modal_registro_datos")
+    const datosError = document.querySelector(".modal_error_registro_datos")
+    const cerrar = document.querySelector(".boton_cerrar")
 
     let [textoTemporalNombre,setTextoTemporalNombre] = useState("")
     let [textoTemporalApellidos,setTextoTemporalApellidos] = useState("")
@@ -68,9 +72,10 @@ function Formulario({agregarParticipante}){
                                     setTextoTemporalNombrePerro =("")
                                     setTextoTemporalRaza =("-")
                                     setInputCarrera =("")
+                                    datosEnviados.classList.add("visible")
                                 })
                             }else{
-                                console.log("error en el registro de datos - revisa que todos los datos sean correctos")
+                                datosError.classList.add("visible")
                             }
                         } }>
                             <section className="datos_persona">
@@ -100,16 +105,25 @@ function Formulario({agregarParticipante}){
                                     <span>Raza</span>
                                         <select nombre="raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value) }>
                                             <option value="-"></option>
-                                            <option value="Pastor Alemán">Pastor Alemán</option>
-                                            <option value="Galgo">Galgo</option>
-                                            <option value="Setter Inglés">Setter inglés</option>
-                                            <option value="Labrador Retriever">Labrador Retriever</option>
-                                            <option value="Golden Retriever">Golden Retriever</option>
-                                            <option value="Pit Bull">Pit Bull</option>
                                             <option value="Beagle">Beagle</option>
-                                            <option value="Dalmata">Dálmata</option>
-                                            <option value="Perro Agua">Perro de Agua</option>
                                             <option value="Border Collie">Border Collie</option>
+                                            <option value="Braco">Braco</option>
+                                            <option value="Doberman">Doberman</option>
+                                            <option value="Golden Retriever">Golden Retriever</option>
+                                            <option value="Labradoodle">Labradoodle</option>
+                                            <option value="Labrador Retriever">Labrador Retriever</option>
+                                            <option value="Leonberger">Leonberger</option>
+                                            <option value="Montaña de los Pirineos">Montaña de los Pirineos</option>
+                                            <option value="Pastor Aleman">Pastor Alemán</option>
+                                            <option value="Pastor Australiano">Pastor Australiano</option>
+                                            <option value="Pastor Belga Malinois">Pastor Belga Malinois</option>
+                                            <option value="Perro de Agua">Perro de Agua</option>
+                                            <option value="Pit Bull">Pit Bull</option>
+                                            <option value="Podenco Andaluz">Podenco Andaluz</option>
+                                            <option value="Rottweiler">Rottweiler</option>
+                                            <option value="Samoyedo">Samoyedo</option>
+                                            <option value="Setter Ingles">Setter Inglés</option>
+                                            <option value="Taigan">Taigan</option>
                                         </select>
                                         <input type="text" placeholder="Otra Raza" value={ textoTemporalRaza } onChange={ evento => setTextoTemporalRaza(evento.target.value)}/>
                                 </div>
@@ -123,6 +137,34 @@ function Formulario({agregarParticipante}){
                             <input className="inscribirse" type="submit" value="INSCRIBIRSE"/>
                             <Link to="/"><div className="logo"></div></Link>
                 </form>
+            </section>
+            <section className="modal_registro_datos">
+            <div className="registro_datos">
+                <div className="boton_cerrar" onClick={ evento => {
+                            evento.preventDefault()
+                            datosEnviados.classList.remove("visible");
+                        }
+                    }>
+                    <span>x</span>
+                </div>
+                <h2>INSCRITO/A</h2>
+                <p>Sus datos se han registrados correctamente</p>
+                <p>Gracias por participar!!!</p>
+            </div>
+            </section>
+            <section className="modal_error_registro_datos">
+            <div className="registro_datos">
+                <div className="boton_cerrar_error" onClick={ evento => {
+                            evento.preventDefault()
+                            
+                            datosError.classList.remove("visible")
+                        }
+                    }>
+                    <span>x</span>
+                </div>
+                <h2>ERROR</h2>
+                <p>Revise que todos los datos estén correctos</p>
+            </div>
             </section>
             <Footer />
             </>)
