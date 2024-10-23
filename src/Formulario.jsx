@@ -109,7 +109,9 @@ function Formulario({agregarParticipante}){
                                             <option value="Border Collie">Border Collie</option>
                                             <option value="Braco">Braco</option>
                                             <option value="Doberman">Doberman</option>
+                                            <option value="Galgo">Galgo</option>
                                             <option value="Golden Retriever">Golden Retriever</option>
+                                            <option value="Husky Siberiano">Husky Siberiano</option>
                                             <option value="Labradoodle">Labradoodle</option>
                                             <option value="Labrador Retriever">Labrador Retriever</option>
                                             <option value="Leonberger">Leonberger</option>

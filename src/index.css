@@ -3,6 +3,7 @@
 *{
  margin:0px;
  padding:0px; 
+ box-sizing: border-box;
 }
 body{
   font-family: "Bungee", sans-serif;
@@ -23,7 +24,7 @@ ul{
 .enlaces_inicio{
   width: 100%;
   height: 100vh;
-  font-size: 3rem;
+  font-size: 2rem;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -31,14 +32,27 @@ ul{
   flex-wrap: wrap;
 }
 .enlace_inicio{
-  background-color: #393F0F;
   padding: 15px;
-  z-index:3;
+  z-index: 3;
 }
 .enlace_inicio a{
+  position:relative;
+  bottom:98px;
+  left:0px;
   color:white;
   cursor: pointer;
   text-decoration:none;
+  padding: 5px;
+}
+.triangulo{
+  width:50px;
+  height:50px;
+  position:relative;
+  top:75px;
+  left:0px;
+  border-bottom: 150px solid transparent;
+  border-left: 300px solid #393F0F;
+  border-top: 150px solid transparent;
 }
 .logo_inicio{
   width:75%;
@@ -63,7 +77,6 @@ ul{
 .enlaces_header{
   width: 100%;
   display:flex;
-  justify-content: space-around;
   border-bottom: 10px solid white;
   margin-bottom: 50px;
 }
@@ -73,20 +86,42 @@ ul{
   align-items: center;
   margin:10px auto 10px;
   width: 150px;
-  background-color: #393F0F;
   padding: 20px;
   z-index:3;
+  cursor:pointer;
 }
 .enlaces_header a{
+  position:relative;
+  bottom:0px;
+  left:-48px;
   color:white;
-  font-size: 1.2rem;
+  cursor: pointer;
   text-decoration:none;
+  padding: 5px;
+  z-index:10;
+}
+.enlace_header:hover{
+  animation: heartbeat 1s infinite;
+}
+.triangulo_header{
+  width:25px;
+  height:25px;
+  position:relative;
+  top:0px;
+  left:50px;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid #393F0F;
+  border-top: 50px solid transparent;
+}
+.enlace_header:first-child .triangulo_header{
+  border-left: 200px solid #393F0F;
+  left:146px;
 }
 .logo_inicio_pages{
   width:100%;
   height:100px;
   position: absolute;
-  top:10px;
+  top:3vh;
   background:url("../public/logo_canicross_1.svg") no-repeat center;
   background-size: auto;
   animation: FromLeft 1s ease;
@@ -298,7 +333,6 @@ input[type="submit"]:hover{
   height:40px;
   border: 1px solid white;
   background-color:#393F0F;
-  border-radius:5px;
   color:white;
   transition: color 300ms;
   cursor:pointer;
@@ -445,7 +479,7 @@ input[type="submit"]:hover{
   border:1px solid #4D4D4D;
 }
 
-/* ESTILO PÁGINAS INTERNAS */
+/* ESTILO RUTAS */
 
 .rutas{
   color:#393F0F;
@@ -454,6 +488,7 @@ input[type="submit"]:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 .rutas h3{
   text-align: center;
@@ -513,8 +548,8 @@ input[type="submit"]:hover{
   }
   .logo_inicio_pages{
     height:70px;
-    top:7px;
-    left:0px;
+    top:5vh;
+    left:57px;
   }
   .carrera{
     flex-direction: column;
@@ -555,20 +590,42 @@ input[type="submit"]:hover{
 /* ESTILOS PANTALLAS HASTA 801px */
 
  @media screen and (max-width:801px){
-  .enlaces_inicio{
-    font-size: 2rem;
+  .logo_inicio{
+    height: 250px;
+    top:0vh;
   }
-  .enlace_header{
-    width: 100px;
-    padding: 10px;
+  .logo_inicio_pages{
+    height:66px;
+    top:5vh;
+    left:0px;
+  }
+  .enlaces_inicio{
+    font-size: 1.7rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  .enlace_inicio a{
+    bottom:93px;
+    left:100px;
+  }
+  .triangulo{
+    top:55px;
+    left:100px;
+    border-bottom: 125px solid transparent;
+    border-left: 250px solid #393F0F;
+    border-top: 125px solid transparent;
   }
   .enlaces_header a{
     font-size: 0.8rem;
   }
-  .logo_inicio_pages{
-    height:50px;
-    top:10px;
-    left:0px;
+  .enlace_header:first-child .triangulo_header{
+    border-left: 200px solid #393F0F;
+    left:50px;
+  }
+  .enlace_header:first-child a{
+    left:-148px;
   }
   .lista_participantes{
     align-items: center;
@@ -604,31 +661,26 @@ input[type="submit"]:hover{
 /* ESTILOS PANTALLAS HASTA 501px */
 
  @media screen and (max-width:501px){
-  .enlaces_inicio{
-    width: 100%;
-    height: 100vh;
-    font-size: 2rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .enlace_inicio{
-    margin-top: 50px;
-  }
-  .enlace_header{
-    width: 70px;
-    padding: 10px;
-  }
-  .enlaces_header a{
-    font-size: 0.7rem;
+  .logo_inicio{
+    height: 250px;
+    top:0vh;
   }
   .logo_inicio_pages{
-    height:35px;
-    top:18px;
-    left:0px;
+    height:80px;
+    top:2vh;
+  }
+  .enlace_header{
+    margin-top:100px;
+  }
+  .enlaces_header a{
+    font-size: 0.8rem;
+  }
+  .enlace_header:first-child .triangulo_header{
+    border-left: 200px solid #393F0F;
+    left:76px;
+  }
+  .enlace_header:first-child a{
+    left:-122px;
   }
   .lista_participantes{
     align-items: center;
