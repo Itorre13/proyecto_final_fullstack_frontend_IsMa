@@ -148,7 +148,7 @@ function Formulario({agregarParticipante}){
                     <span>x</span>
                 </div>
                 <h2>INSCRITO/A</h2>
-                <p>Sus datos se han registrados correctamente</p>
+                <p>Sus datos se han registrado correctamente</p>
                 <p>Gracias por participar!!!</p>
             </div>
             </section>
@@ -163,7 +163,7 @@ function Formulario({agregarParticipante}){
                     <span>x</span>
                 </div>
                 <h2>ERROR</h2>
-                <p>Revise que todos los datos estén correctos</p>
+                <p>Revise que todos los datos introducidos estén correctos</p>
             </div>
             </section>
             <Footer />
