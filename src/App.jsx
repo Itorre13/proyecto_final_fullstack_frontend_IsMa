@@ -23,10 +23,16 @@ function App() {
     setParticipantes(participantes.filter( participante => participante.id != id))
   }
 
-  function actualizarParticipante(id,texto){
+  function actualizarParticipante(id,nombre,apellidos,email,telefono,perro,raza,carrera){
     setParticipantes(participantes.map( participante => {
       if(participante.id == id){
-        participante.nombre = texto
+        participante.nombre == nombre,
+        participante.apellidos == apellidos,
+        participante.email == email,
+        participante.telefono == telefono,
+        participante.perro == perro,
+        participante.raza == raza,
+        participante.carrera == carrera
       }
       return participante
      }))

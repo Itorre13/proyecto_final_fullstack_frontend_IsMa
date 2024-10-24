@@ -65,13 +65,13 @@ function Formulario({agregarParticipante}){
                                         raza : textoTemporalRaza,
                                         carrera : inputCarrera
                                     })
-                                    setTextoTemporalNombre =("")
-                                    setTextoTemporalApellidos =("")
-                                    setTextoTemporalEmail =("")
-                                    setTextoTemporalTelefono =("")
-                                    setTextoTemporalNombrePerro =("")
-                                    setTextoTemporalRaza =("-")
-                                    setInputCarrera =("")
+                                    setTextoTemporalNombre("")
+                                    setTextoTemporalApellidos("")
+                                    setTextoTemporalEmail("")
+                                    setTextoTemporalTelefono("")
+                                    setTextoTemporalNombrePerro("")
+                                    setTextoTemporalRaza("-")
+                                    setInputCarrera("")
                                     datosEnviados.classList.add("visible")
                                 })
                             }else{
@@ -165,7 +165,7 @@ function Formulario({agregarParticipante}){
                     <span>x</span>
                 </div>
                 <h2>ERROR</h2>
-                <p>Revise que todos los datos introducidos estén correctos</p>
+                <p>Revise que todos los datos introducidos<br></br>estén correctos</p>
             </div>
             </section>
             <Footer />
