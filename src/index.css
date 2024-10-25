@@ -398,11 +398,13 @@ input[type="submit"]:hover{
 .nombre_participante{
   display: flex;
   align-items: center;
+  padding-bottom: 5px;
   border-bottom: 1px dashed #4D4D4D;
 }
 .nombre_perro{
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 .participante h2,.participante input{
   font-size:1.5em;
@@ -424,61 +426,63 @@ input[type="submit"]:hover{
 .participante input{
   border-bottom: 1px dashed #4D4D4D;
 }
-.boton{ 
-  width:22px;
-  height:25px;
+.botones{
+  display: flex;
+  align-items: center;
+  margin-top:10px;
+}
+.boton_editar{ 
+  width:30px;
+  height:33px;
   border:0.5px solid #4D4D4D;
-  margin: 5px;
   padding: 5px;
   border-radius: 5px;
   color: #4D4D4D;
   background-color: white;
 }
-.boton span{
+.boton_editar span, .boton_borrar span{
   font-family: sans-serif;
   color: #4D4D4D;
-  position:relative;
   text-transform:uppercase;
   font-weight:600;
-  left:-1.2rem;
-  top:-1.2rem;
+  position:relative;
+  left:-1.5rem;
+  top:1.8rem;
   opacity:0;
 }
-.nombre_perro .boton span{
-  left:-1.2rem;
-  top:1.5rem;
+.fa-pen-to-square{
+  font-size: 1rem;
+  position:relative;
+  left:3px;
+  top:0px;
 }
-.boton:hover span{
+.fa-floppy-disk{
+  font-size: 1rem;
+  position:relative;
+  left:2px;
+  top:0px;
+}
+.boton_editar:hover span, .boton_borrar:hover span{
   opacity:1;
 }
-.boton:hover{
+.boton_editar:hover{
   background-color: #4D4D4D;
   color:white;
   border:1px solid #4D4D4D;
 }
 .boton_borrar{
-  width:22px;
-  height:25px;
+  width:30px;
+  height:33px;
+  margin-left: 15px;
   border:0.5px solid white;
   color: white;
   background-color: #4D4D4D;
 }
-.boton_borrar span{
-  color: #4D4D4D;
-  position:relative;
-  text-transform: uppercase;
-  font-weight:600;
-  left:-0.2rem;
-  top:1.4rem;
-  opacity:0;
-}
 .fa-trash-can{
+  font-size: 1rem;
   position:relative;
-  left:0;
-  top:-14px;
-}
-.boton_borrar:hover span{
-  opacity:1;
+  left:2px;
+  top:opx;
 }
 .boton_borrar:hover{
   background-color: white;

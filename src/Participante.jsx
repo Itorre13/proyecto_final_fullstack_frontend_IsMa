@@ -6,7 +6,6 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let [editandoApellidos,setEditandoApellidos] = useState(false)
         let [editandoEmail,setEditandoEmail] = useState(false)
         let [editandoTelefono,setEditandoTelefono] = useState(false)
-
         let [editandoPerro,setEditandoPerro] = useState(false)
         let [editandoRaza,setEditandoRaza] = useState(false)
         let [editandoCarrera,setEditandoCarrera] = useState(false)
@@ -15,10 +14,18 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let [textoTemporalApellidos,setTextoTemporalApellidos] = useState(apellidos)
         let [textoTemporalEmail,setTextoTemporalEmail] = useState(email)
         let [textoTemporalTelefono,setTextoTemporalTelefono] = useState(telefono)
-
         let [textoTemporalNombrePerro,setTextoTemporalNombrePerro] = useState(perro)
         let [textoTemporalRaza,setTextoTemporalRaza] = useState(raza)
         let [inputCarrera,setInputCarrera] = useState(carrera)
+
+        let regexNombre = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
+        let regexApellidos = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
+        let regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        let regexTelefono = /^[0-9]{9}$/
+        let regexNombrePerro = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
+        let regexRaza = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
+
+        
 
     return(<section className="participante">
                 <div className="nombre_participante">
@@ -43,51 +50,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                 type="text"
                                 value={ textoTemporalTelefono }
                                 onChange= { evento => setTextoTemporalTelefono(evento.target.value) }
-                                />     
-                        <button className="boton" 
-                                onClick={ () => {
-                                        if(editandoNombre || editandoApellidos || editandoEmail || editandoTelefono){
-                                                if(textoTemporalNombre.trim() || textoTemporalApellidos.trim() || textoTemporalEmail.trim() || textoTemporalTelefono.trim() != "" && textoTemporalNombre.trim() != nombre && textoTemporalApellidos.trim() != apellidos && textoTemporalEmail.trim() != email && textoTemporalTelefono.trim() != telefono){
-                                                        return fetch("http://localhost:4000/participantes/actualizar/participante/" + id, {
-                                                                method : "PUT",
-                                                                body : JSON.stringify({ 
-                                                                        nombre : textoTemporalNombre.trim(),
-                                                                        apellidos : textoTemporalApellidos.trim(), 
-                                                                        email : textoTemporalEmail.trim(), 
-                                                                        telefono : textoTemporalTelefono.trim() 
-                                                                        }),
-                                                                headers : {
-                                                                        "Content-type" : "application/json"
-                                                                }
-                                                        })
-                                                        .then(respuesta => respuesta.json())
-                                                        .then(({error,resultado}) => {
-                                                                if(!error && resultado == "ok"){
-                                                                        actualizarParticipante(id,textoTemporalNombre.trim(),textoTemporalApellidos.trim(),textoTemporalEmail.trim(),textoTemporalTelefono.trim())
-
-                                                                        setTextoTemporalNombre(textoTemporalNombre.trim()) + setTextoTemporalApellidos(textoTemporalApellidos.trim()) + setTextoTemporalEmail(textoTemporalEmail.trim()) + setTextoTemporalTelefono(textoTemporalTelefono.trim())
-                                                                        return setEditandoNombre(false) + setEditandoApellidos(false) + setEditandoEmail(false) + setEditandoTelefono(false)
-                                                                }
-                                                                console.log("...error al actualizar participante")
-                                                        })
-                                                }
-                                                setTextoTemporalNombre(nombre)
-                                                setEditandoNombre(false)
-                                                setTextoTemporalApellidos(apellidos)
-                                                setEditandoApellidos(false)
-                                                setTextoTemporalEmail(email)
-                                                setEditandoEmail(false)
-                                                setTextoTemporalTelefono(telefono)
-                                                setEditandoTelefono(false)
-                                        }else{
-                                                setEditandoNombre(true)
-                                                setEditandoApellidos(true)
-                                                setEditandoEmail(true)
-                                                setEditandoTelefono(true)
-                                        }     
-                                        } }
-                                >{ editandoNombre || editandoApellidos || editandoEmail || editandoTelefono ? <i className="fa-regular fa-floppy-disk"><span>guardar</span></i> : <i className="fa-regular fa-pen-to-square"><span>editar</span></i> }
-                        </button>
+                                />
                 </div>
                 <div className="nombre_perro">
                         <h2 className={ !editandoPerro ? "visible" : ""}>{ perro }</h2>
@@ -104,17 +67,22 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                 value={ inputCarrera }
                                 onChange= { evento => setInputCarrera(evento.target.value) }
                                 />
-
-                        <button className="boton"
+                </div>     
+                <div className="botones">
+                        <button className="boton_editar" 
                                 onClick={ () => {
-                                        if(editandoPerro || editandoRaza || editandoCarrera){
-                                                if(textoTemporalNombrePerro.trim() && textoTemporalRaza.trim() && inputCarrera.trim() != "" && textoTemporalNombrePerro.trim() != perro && textoTemporalRaza.trim() != raza && inputCarrera.trim() != carrera){
+                                        if(editandoNombre || editandoApellidos || editandoEmail || editandoTelefono || editandoPerro || editandoRaza || editandoCarrera){
+                                                if(textoTemporalNombre.trim() != "" && regexNombre.test(textoTemporalNombre) && textoTemporalNombre != nombre || textoTemporalApellidos.trim() != "" && regexApellidos.test(textoTemporalApellidos) && textoTemporalApellidos != apellidos || textoTemporalEmail.trim() != "" && regexEmail.test(textoTemporalEmail) && textoTemporalEmail != email || textoTemporalTelefono.trim() != "" && regexTelefono.test(textoTemporalTelefono) && textoTemporalTelefono != telefono || textoTemporalNombrePerro.trim() != "" && regexNombrePerro.test(textoTemporalNombrePerro) && textoTemporalNombrePerro != perro || textoTemporalRaza.trim() != "" && regexRaza.test(textoTemporalRaza) && textoTemporalRaza != raza || inputCarrera.trim() != "" && inputCarrera != carrera ){
                                                         return fetch("http://localhost:4000/participantes/actualizar/participante/" + id, {
                                                                 method : "PUT",
-                                                                body : JSON.stringify({
+                                                                body : JSON.stringify({ 
+                                                                        nombre : textoTemporalNombre.trim(),
+                                                                        apellidos : textoTemporalApellidos.trim(), 
+                                                                        email : textoTemporalEmail.trim(), 
+                                                                        telefono : textoTemporalTelefono.trim(),
                                                                         perro : textoTemporalNombrePerro.trim(),
                                                                         raza : textoTemporalRaza.trim(),
-                                                                        carrera : inputCarrera.trim()
+                                                                        carrera : inputCarrera.trim() 
                                                                         }),
                                                                 headers : {
                                                                         "Content-type" : "application/json"
@@ -123,14 +91,40 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                         .then(respuesta => respuesta.json())
                                                         .then(({error,resultado}) => {
                                                                 if(!error && resultado == "ok"){
-                                                                        actualizarParticipante(id,textoTemporalNombrePerro.trim(),textoTemporalRaza.trim(),inputCarrera.trim())
+                                                                        actualizarParticipante(id,textoTemporalNombre.trim(),textoTemporalApellidos.trim(),textoTemporalEmail.trim(),textoTemporalTelefono.trim(),textoTemporalNombrePerro.trim(),textoTemporalRaza.trim(),inputCarrera.trim())
 
-                                                                        setTextoTemporalNombrePerro(textoTemporalNombrePerro.trim()) + setTextoTemporalRaza(textoTemporalRaza.trim()) + setInputCarrera(inputCarrera.trim())
-                                                                        return setEditandoPerro(false) + setEditandoRaza(false) + setEditandoCarrera(false)
+                                                                        setTextoTemporalNombre(textoTemporalNombre.trim())
+                                                                        setTextoTemporalApellidos(textoTemporalApellidos.trim())
+                                                                        setTextoTemporalEmail(textoTemporalEmail.trim())
+                                                                        setTextoTemporalTelefono(textoTemporalTelefono.trim())
+                                                                        setTextoTemporalNombrePerro(textoTemporalNombrePerro.trim())
+                                                                        setTextoTemporalRaza(textoTemporalRaza.trim())
+                                                                        setInputCarrera(inputCarrera.trim())
+
+                                                                        setEditandoNombre(false)
+                                                                        setEditandoApellidos(false)
+                                                                        setEditandoEmail(false)
+                                                                        setEditandoTelefono(false)
+                                                                        setEditandoPerro(false)
+                                                                        setEditandoRaza(false)
+                                                                        
+                                                                        return setEditandoCarrera(false)
                                                                 }
                                                                 console.log("...error al actualizar participante")
                                                         })
                                                 }
+                                                setTextoTemporalNombre(nombre)
+                                                setEditandoNombre(false)
+
+                                                setTextoTemporalApellidos(apellidos)
+                                                setEditandoApellidos(false)
+
+                                                setTextoTemporalEmail(email)
+                                                setEditandoEmail(false)
+
+                                                setTextoTemporalTelefono(telefono)
+                                                setEditandoTelefono(false)
+
                                                 setTextoTemporalNombrePerro(perro)
                                                 setEditandoPerro(false)
 
@@ -140,32 +134,35 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                                 setInputCarrera(carrera)
                                                 setEditandoCarrera(false)
                                         }else{
+                                                setEditandoNombre(true)
+                                                setEditandoApellidos(true)
+                                                setEditandoEmail(true)
+                                                setEditandoTelefono(true)
                                                 setEditandoPerro(true)
                                                 setEditandoRaza(true)
                                                 setEditandoCarrera(true)
                                         }     
                                         } }
-                                >{ editandoPerro || editandoRaza || editandoCarrera  ? <i className="fa-regular fa-floppy-disk"><span>guardar</span></i> : <i className="fa-regular fa-pen-to-square"><span>editar</span></i> }
+                                >{ editandoNombre || editandoApellidos || editandoEmail || editandoTelefono || editandoPerro || editandoRaza || editandoCarrera ? <i className="fa-regular fa-floppy-disk"><span>guardar</span></i> : <i className="fa-regular fa-pen-to-square"><span>editar</span></i> }
+                        </button>
+                        <button className="boton_borrar"
+                                onClick={ () => {
+                                        fetch("http://localhost:4000/participantes/borrar/" + id, {
+                                                method : "DELETE"
+                                        })
+                                        .then(respuesta => respuesta.json()
+                                                )
+                                        .then(({error,resultado}) => {
+                                                if(!error && resultado == "ok"){
+                                                        return borrarParticipante(id)
+                                                }
+                                                console.log("...error al borrar participante")
+                                        })
+                                } }
+                                >
+                                <i className="fa-regular fa-trash-can"><span>borrar</span> </i>           
                         </button>
                 </div>
-                <button className="boton_borrar"
-                        onClick={ () => {
-                                fetch("http://localhost:4000/participantes/borrar/" + id, {
-                                        method : "DELETE"
-                                })
-                                .then(respuesta => respuesta.json()
-                                        )
-                                .then(({error,resultado}) => {
-                                        if(!error && resultado == "ok"){
-                                                return borrarParticipante(id)
-                                        }
-                                        console.log("...error al borrar participante")
-                                })
-                        } }
-                        >
-                        <span>borrar</span>
-                        <i className="fa-regular fa-trash-can"></i>
-                </button>
 
         </section>)
 }
