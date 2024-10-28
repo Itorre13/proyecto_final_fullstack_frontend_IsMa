@@ -38,7 +38,7 @@ function Formulario({agregarParticipante}){
                             evento.preventDefault()
 
                             if(regexNombre.test(textoTemporalNombre) != "" && regexApellidos.test(textoTemporalApellidos) != "" && regexEmail.test(textoTemporalEmail) != "" && regexTelefono.test(textoTemporalTelefono) != "" && regexNombrePerro.test(textoTemporalNombrePerro) != "" && regexRaza.test(textoTemporalRaza) != ""){
-                                fetch("http://localhost:4000/participantes/nuevo", {
+                                fetch("https://proyecto-final-fullstack-backend-isma.onrender.com/nuevo", {
                                     method : "POST",
                                     body : JSON.stringify({ 
                                         nombre : textoTemporalNombre,
