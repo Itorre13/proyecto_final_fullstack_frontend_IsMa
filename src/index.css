@@ -407,7 +407,7 @@ input[type="submit"]:hover{
   margin-top: 5px;
 }
 .participante h2,.participante input{
-  font-size:1.5em;
+  font-size:1.1rem;
   font-weight:400;
   color:#4D4D4D;
   width:100%;
@@ -482,7 +482,7 @@ input[type="submit"]:hover{
   font-size: 1rem;
   position:relative;
   left:2px;
-  top:opx;
+  top:0px;
 }
 .boton_borrar:hover{
   background-color: white;
@@ -710,6 +710,23 @@ input[type="submit"]:hover{
     height:80px;
     top:2vh;
   }
+  .enlaces_inicio{
+    font-size: 1.3rem;
+  }
+  .enlace_inicio{
+    padding: 0px;
+  }
+  .enalce_inicio a{
+    bottom:37px;
+    left:120px;
+  }
+  .triangulo{
+    top:80px;
+    left:120px;
+    border-bottom: 100px solid transparent;
+    border-left: 200px solid #393F0F;
+    border-top: 100px solid transparent;
+  }
   .enlace_header{
     margin-top:100px;
   }
@@ -723,12 +740,37 @@ input[type="submit"]:hover{
   .enlace_header:first-child a{
     left:-70px;
   }
+  .datos_persona,.datos_perro,.carrera{
+    margin:0px auto 0px;
+  }
+  .datos_persona div{
+    width: 300px;
+  }
+  .datos_perro div{
+    width: 300px;
+  }
+  .carrera{
+    padding: 14px;
+  }
+  input[type="submit"]{
+    width:300px;
+  }
+  .logo{
+    width: 214px;
+    height: 142px;
+  }
   .lista_participantes{
     align-items: center;
     margin:10px 20px 10px;
   }
   .lista_participantes h2{
     font-size: 1rem;
+  }
+  .participante h2{
+    font-size: 0.9rem;
+  }
+  .participante h3{
+    font-size: 0.7rem;
   }
   .arrow_1{
     height:3rem;
