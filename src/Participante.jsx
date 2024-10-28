@@ -24,6 +24,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let regexTelefono = /^[0-9]{9}$/
         let regexNombrePerro = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
         let regexRaza = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
+        let regexCarrera = /^(corta|larga)$/
 
         
 
@@ -72,7 +73,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                         <button className="boton_editar" 
                                 onClick={ () => {
                                         if(editandoNombre || editandoApellidos || editandoEmail || editandoTelefono || editandoPerro || editandoRaza || editandoCarrera){
-                                                if(textoTemporalNombre.trim() != "" && regexNombre.test(textoTemporalNombre) && textoTemporalNombre != nombre || textoTemporalApellidos.trim() != "" && regexApellidos.test(textoTemporalApellidos) && textoTemporalApellidos != apellidos || textoTemporalEmail.trim() != "" && regexEmail.test(textoTemporalEmail) && textoTemporalEmail != email || textoTemporalTelefono.trim() != "" && regexTelefono.test(textoTemporalTelefono) && textoTemporalTelefono != telefono || textoTemporalNombrePerro.trim() != "" && regexNombrePerro.test(textoTemporalNombrePerro) && textoTemporalNombrePerro != perro || textoTemporalRaza.trim() != "" && regexRaza.test(textoTemporalRaza) && textoTemporalRaza != raza || inputCarrera.trim() != "" && inputCarrera != carrera ){
+                                                if(textoTemporalNombre.trim() != "" && regexNombre.test(textoTemporalNombre) && textoTemporalNombre != nombre || textoTemporalApellidos.trim() != "" && regexApellidos.test(textoTemporalApellidos) && textoTemporalApellidos != apellidos || textoTemporalEmail.trim() != "" && regexEmail.test(textoTemporalEmail) && textoTemporalEmail != email || textoTemporalTelefono.trim() != "" && regexTelefono.test(textoTemporalTelefono) && textoTemporalTelefono != telefono || textoTemporalNombrePerro.trim() != "" && regexNombrePerro.test(textoTemporalNombrePerro) && textoTemporalNombrePerro != perro || textoTemporalRaza.trim() != "" && regexRaza.test(textoTemporalRaza) && textoTemporalRaza != raza || inputCarrera.trim() != "" && regexCarrera.test(inputCarrera) && inputCarrera != carrera){
                                                         return fetch("http://localhost:4000/participantes/actualizar/participante/" + id, {
                                                                 method : "PUT",
                                                                 body : JSON.stringify({ 
