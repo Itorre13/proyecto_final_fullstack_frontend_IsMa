@@ -8,7 +8,7 @@ function App() {
   let [participantes,setParticipantes] = useState([])
 
   useEffect(() => {
-    fetch("https://proyecto-final-fullstack-backend-isma.onrender.com/participantes/")
+    fetch("https://proyecto-final-fullstack-backend-isma.onrender.com/participantes")
     .then(respuesta => respuesta.json())
     .then(participantes => setParticipantes(participantes))
   },[])
