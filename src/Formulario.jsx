@@ -115,7 +115,6 @@ function Formulario({agregarParticipante}){
                                             <option value="Labradoodle">Labradoodle</option>
                                             <option value="Labrador Retriever">Labrador Retriever</option>
                                             <option value="Leonberger">Leonberger</option>
-                                            <option value="Montaña de los Pirineos">Montaña de los Pirineos</option>
                                             <option value="Pastor Aleman">Pastor Alemán</option>
                                             <option value="Pastor Australiano">Pastor Australiano</option>
                                             <option value="Pastor Belga Malinois">Pastor Belga Malinois</option>
