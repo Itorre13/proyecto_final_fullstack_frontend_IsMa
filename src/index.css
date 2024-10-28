@@ -682,6 +682,9 @@ input[type="submit"]:hover{
     flex-direction: column;
     justify-content: space-around;
   }
+  .footer div{
+    align-items: center;
+  }
   .footer a, .footer h3 .fa-copyright{
     font-size: 1rem;
   }
@@ -703,8 +706,8 @@ input[type="submit"]:hover{
 
  @media screen and (max-width:501px){
   .logo_inicio{
-    height: 250px;
-    top:0vh;
+    height: 90px;
+    top:1vh;
   }
   .logo_inicio_pages{
     height:80px;
@@ -712,6 +715,7 @@ input[type="submit"]:hover{
   }
   .enlaces_inicio{
     font-size: 1.2rem;
+    height: 90vh;
   }
   .enlace_inicio{
     padding: 0px;
