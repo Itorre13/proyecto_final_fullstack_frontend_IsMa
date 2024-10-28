@@ -74,7 +74,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                                 onClick={ () => {
                                         if(editandoNombre || editandoApellidos || editandoEmail || editandoTelefono || editandoPerro || editandoRaza || editandoCarrera){
                                                 if(textoTemporalNombre.trim() != "" && regexNombre.test(textoTemporalNombre) && textoTemporalNombre != nombre || textoTemporalApellidos.trim() != "" && regexApellidos.test(textoTemporalApellidos) && textoTemporalApellidos != apellidos || textoTemporalEmail.trim() != "" && regexEmail.test(textoTemporalEmail) && textoTemporalEmail != email || textoTemporalTelefono.trim() != "" && regexTelefono.test(textoTemporalTelefono) && textoTemporalTelefono != telefono || textoTemporalNombrePerro.trim() != "" && regexNombrePerro.test(textoTemporalNombrePerro) && textoTemporalNombrePerro != perro || textoTemporalRaza.trim() != "" && regexRaza.test(textoTemporalRaza) && textoTemporalRaza != raza || inputCarrera.trim() != "" && regexCarrera.test(inputCarrera) && inputCarrera != carrera){
-                                                        return fetch("https://proyecto-final-fullstack-backend-isma.onrender.com/participantes/actualizar/participante/" + id, {
+                                                        return fetch("https://canicross-entresierras-backend.onrender.com/participantes/actualizar/participante/" + id, {
                                                                 method : "PUT",
                                                                 body : JSON.stringify({ 
                                                                         nombre : textoTemporalNombre.trim(),
@@ -148,7 +148,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
                         </button>
                         <button className="boton_borrar"
                                 onClick={ () => {
-                                        fetch("https://proyecto-final-fullstack-backend-isma.onrender.com/participantes/borrar/" + id, {
+                                        fetch("https://canicross-entresierras-backend.onrender.com/participantes/borrar/" + id, {
                                                 method : "DELETE"
                                         })
                                         .then(respuesta => respuesta.json()
