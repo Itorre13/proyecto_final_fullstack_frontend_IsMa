@@ -642,8 +642,8 @@ input[type="submit"]:hover{
     padding: 0px;
   }
   .enlace_inicio a{
-    bottom:93px;
-    left:100px;
+    bottom:40px;
+    left:120px;
   }
   .triangulo{
     top:55px;
@@ -711,12 +711,12 @@ input[type="submit"]:hover{
     top:2vh;
   }
   .enlaces_inicio{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .enlace_inicio{
     padding: 0px;
   }
-  .enalce_inicio a{
+  .enlace_inicio a{
     bottom:37px;
     left:120px;
   }
