@@ -1,13 +1,13 @@
 /* ESTILOS GENERALES */
 
 *{
- margin:0px;
- padding:0px; 
+ margin: 0px;
+ padding: 0px; 
  box-sizing: border-box;
 }
 body{
   font-family: "Bungee", sans-serif;
-  font-weight:200;
+  font-weight: 200;
 }
 ul{
   list-style: none;
@@ -17,7 +17,7 @@ ul{
 
 .background{
   width: 100%;
-  min-height:100vh;
+  min-height: 100vh;
   background: url("../public/background.jpg") no-repeat center;
   background-size: cover;
 }
@@ -36,31 +36,31 @@ ul{
   z-index: 3;
 }
 .enlace_inicio a{
-  position:relative;
-  bottom:98px;
-  left:0px;
-  color:white;
+  position: relative;
+  bottom: 98px;
+  left: 0px;
+  color: white;
   cursor: pointer;
-  text-decoration:none;
+  text-decoration: none;
   padding: 5px;
 }
 .triangulo{
-  width:50px;
-  height:50px;
-  position:relative;
-  top:75px;
-  left:0px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 75px;
+  left: 0px;
   border-bottom: 150px solid transparent;
   border-left: 300px solid #393F0F;
   border-top: 150px solid transparent;
 }
 .logo_inicio{
-  width:75%;
-  height:400px;
+  width: 75%;
+  height: 400px;
   position: fixed;
-  top:5vh;
-  left:12%;
-  background:url("../public/logo_canicross_2.svg") no-repeat center;
+  top: 5vh;
+  left: 12%;
+  background: url("../public/logo_canicross_2.svg") no-repeat center;
   background-size: auto;
   animation: FromLeft 1s ease;
 }
@@ -76,7 +76,7 @@ ul{
 
 .enlaces_header{
   width: 100%;
-  display:flex;
+  display: flex;
   border-bottom: 10px solid white;
   margin-bottom: 50px;
 }
@@ -84,19 +84,19 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:10px auto 10px;
+  margin: 10px auto 10px;
   width: 150px;
   padding: 20px;
-  z-index:3;
-  cursor:pointer;
+  z-index: 3;
+  cursor: pointer;
 }
 .enlaces_header a{
-  position:relative;
-  bottom:0px;
-  left:-48px;
-  color:white;
+  position: relative;
+  bottom: 0px;
+  left: -48px;
+  color: white;
   cursor: pointer;
-  text-decoration:none;
+  text-decoration: none;
   padding: 5px;
   z-index:10;
 }
@@ -104,57 +104,57 @@ ul{
   animation: heartbeat 1s infinite;
 }
 .triangulo_header{
-  width:25px;
-  height:25px;
-  position:relative;
-  top:0px;
-  left:50px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 0px;
+  left: 50px;
   border-bottom: 50px solid transparent;
   border-left: 100px solid #393F0F;
   border-top: 50px solid transparent;
 }
 .enlace_header:first-child .triangulo_header{
   border-left: 180px solid #393F0F;
-  left:133px;
+  left: 133px;
 }
 .logo_inicio_pages{
-  width:100%;
-  height:100px;
+  width: 100%;
+  height: 100px;
   position: absolute;
-  top:3vh;
-  background:url("../public/logo_canicross_1.svg") no-repeat center;
+  top: 3vh;
+  background: url("../public/logo_canicross_1.svg") no-repeat center;
   background-size: auto;
   animation: FromLeft 1s ease;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* ESTILOS FOOTER */
 
 .footer{
   font-family: sans-serif;
-  color:white;
+  color: white;
   width: 100%;
   height: 3vh;
   background-color: #393F0F;
-  position:fixed;
+  position: fixed;
   bottom: 0px;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index:1;
+  z-index: 1;
 }
 .footer div{
-  display:flex;
+  display: flex;
 }
 .footer a, .footer h3{
-  color:white;
+  color: white;
   padding: 2px;
   font-size: 0.8rem;
   font-weight: 600;
   text-decoration: none;
 }
 .footer a{
-  color:#DEE6CF;
+  color: #DEE6CF;
 }
 .fa-copyright{
   font-size: 1rem;
@@ -178,7 +178,7 @@ ul{
   flex-wrap: wrap;
 }
 .datos_persona{
-  margin:20px auto 0px;
+  margin: 20px auto 0px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -188,7 +188,7 @@ ul{
   padding: 5px;
 }
 .datos_perro{
-  margin:20px auto 0px;
+  margin:  auto 0px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -202,7 +202,7 @@ ul{
   width: 80%;
 }
 .carrera{
-  margin:20px auto 0px;
+  margin: 20px auto 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -213,7 +213,7 @@ ul{
   background-color: rgba(255,255,255,0.3);
 }
 .carrera input{
-  display:flex;
+  display: flex;
   width: 20px;
   height: 20px;
   margin-left: 10px;
@@ -224,18 +224,18 @@ ul{
   border-left: 3px solid #4D4D4D;
 }
 input,button,select{
-  display:block;
-  font-family:sans-serif;
-  cursor:pointer;
-  border-radius:10px;
-  padding:5px;
+  display: block;
+  font-family: sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px;
 }
 button{
-  border-radius:5px;
+  border-radius: 5px;
 }
 form span, form label{
   font-size: 1rem;
-  color:#4D4D4D;
+  color: #4D4D4D;
   padding: 5px;
 }
 form label{
@@ -244,15 +244,15 @@ form label{
 input[type="text"]{
   width: 80%;
   font-family: sans-serif;
-  margin-bottom:5px;
-  border-radius:10px;
-  padding:15px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 15px;
 }
 input[type="submit"]{
   background-color: #393F0F;
   color: white;
-  border-radius:10px;
-  padding:15px;
+  border-radius: 10px;
+  padding: 15px;
   margin: 20px auto 20px;
   width: 400px;
   font-family: "Bungee", sans-serif;
@@ -260,13 +260,13 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
   background-color: white;
-  color:#4D4D4D;
+  color: #4D4D4D;
   font-weight: 800;
 }
 .logo{
   width: 300px;
   height: 200px;
-  background:url("../public/icon.svg") no-repeat center;
+  background: url("../public/icon.svg") no-repeat center;
   background-size: cover;
   cursor: pointer;
 }
@@ -285,110 +285,110 @@ input[type="submit"]:hover{
   }
 }
 .modal_registro_datos, .modal_error_registro_datos{
-  width:100%;
-  height:100vh;
-  position:fixed;
-  top:0;
-  left:0;
-  background-color:rgba(222,230,207,0.3);
-  -webkit-backdrop-filter:blur(20px);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(222,230,207,0.3);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  display:none;
-  justify-content:center;
-  align-items:center;
-  z-index:5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
 .registro_datos{
-  width:100%;
-  max-width:450px;
-  padding:20px;
-  background-color:#393F0F;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-evenly;
-  align-items:center;
-  position:relative;
-  color:white
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  background-color: #393F0F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  color: white
 }
 .registro_datos h2{
   font-size: 2rem;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 .registro_datos p:nth-child(3){
   font-family: sans-serif;
   text-align: center;
-  font-size:1.1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding:15px 0px;
-  border-bottom:1px solid #DEE6CF;
-  border-top:1px solid #DEE6CF;
+  padding: 15px 0px;
+  border-bottom: 1px solid #DEE6CF;
+  border-top: 1px solid #DEE6CF;
 }
 .registro_datos p:nth-child(4){
   font-family: sans-serif;
-  margin-top:15px;
-  font-weight:600;
-  font-style:italic;
-  color:#DEE6CF;
+  margin-top: 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: #DEE6CF;
 }
 .boton_cerrar, .boton_cerrar_error{
-  position:absolute;
-  top:5px;
-  right:5px;
-  width:40px;
-  height:40px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
   border: 1px solid white;
-  background-color:#393F0F;
-  color:white;
+  background-color: #393F0F;
+  color: white;
   transition: color 300ms;
-  cursor:pointer;
-  text-transform:uppercase;
+  cursor: pointer;
+  text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 800;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 .boton_cerrar span, .boton_cerrar_error span{
   position: relative;
-  top:9px;
-  left:11px;
+  top: 9px;
+  left: 11px;
 }
 .boton_cerrar:hover, .boton_cerrar_error:hover{
-  color:#393F0F;
+  color: #393F0F;
   background-color: white;
 }
 .visible{
-  display:flex;
+  display: flex;
 }
 .lista_participantes{
   display: flex;
-  margin:10px 200px 10px;
+  margin: 10px 200px 10px;
 }
 .lista_participantes h2{
   text-align: center;
   margin: 20px auto 20px;
-  color:#393F0F;
+  color: #393F0F;
 }
 .arrow_1{
-  height:4rem;
-  width:4rem;
-  background:url("../public/arrow.svg") no-repeat center;
+  height: 4rem;
+  width: 4rem;
+  background: url("../public/arrow.svg") no-repeat center;
   background-size: contain;
 }
 .arrow_2{
-  height:4rem;
-  width:4rem;
-  background:url("../public/arrow.svg") no-repeat center;
+  height: 4rem;
+  width: 4rem;
+  background: url("../public/arrow.svg") no-repeat center;
   background-size: contain;
 }
 .participantes{
-  display:flex;
-  flex-direction:column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
   padding-bottom: 100px;
   background-color: #DEE6CF;
 }
 .participante{
   background-color: #F1F7DE;
   width: calc(100 - 50px);
-  padding:50px;
+  padding: 50px;
   font-size: 0.7rem;
   font-family: sans-serif;
 }
@@ -407,21 +407,21 @@ input[type="submit"]:hover{
   margin-top: 5px;
 }
 .participante h2,.participante input{
-  font-size:1.1rem;
-  font-weight:400;
-  color:#4D4D4D;
-  width:100%;
-  border:none;
-  display:none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #4D4D4D;
+  width: 100%;
+  border: none;
+  display: none;
 }
 .participante h3{
-  display:none;
+  display: none;
   text-align: end;
-  width:100%;
+  width: 100%;
   font-size: 0.8rem;
 }
 .participante .visible{
-  display:block;
+  display: block;
 }
 .participante input{
   border-bottom: 1px dashed #4D4D4D;
@@ -429,12 +429,12 @@ input[type="submit"]:hover{
 .botones{
   display: flex;
   align-items: center;
-  margin-top:10px;
+  margin-top: 10px;
 }
 .boton_editar{ 
-  width:30px;
-  height:33px;
-  border:0.5px solid #4D4D4D;
+  width: 30px;
+  height: 33px;
+  border: 0.5px solid #4D4D4D;
   padding: 5px;
   border-radius: 5px;
   color: #4D4D4D;
@@ -443,57 +443,57 @@ input[type="submit"]:hover{
 .boton_editar span, .boton_borrar span{
   font-family: sans-serif;
   color: #4D4D4D;
-  text-transform:uppercase;
-  font-weight:600;
-  position:relative;
-  left:-1.5rem;
-  top:1.8rem;
-  opacity:0;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  left: -1.5rem;
+  top: 1.8rem;
+  opacity: 0;
 }
 .fa-pen-to-square{
   font-size: 1rem;
-  position:relative;
-  left:3px;
-  top:0px;
+  position: relative;
+  left: 3px;
+  top: 0px;
 }
 .fa-floppy-disk{
   font-size: 1rem;
-  position:relative;
-  left:2px;
-  top:0px;
+  position: relative;
+  left: 2px;
+  top: 0px;
 }
 .boton_editar:hover span, .boton_borrar:hover span{
-  opacity:1;
+  opacity: 1;
 }
 .boton_editar:hover{
   background-color: #4D4D4D;
-  color:white;
+  color: white;
   border:1px solid #4D4D4D;
 }
 .boton_borrar{
-  width:30px;
-  height:33px;
+  width: 30px;
+  height: 33px;
   margin-left: 15px;
-  border:0.5px solid white;
+  border: 0.5px solid white;
   color: white;
   background-color: #4D4D4D;
 }
 .fa-trash-can{
   font-size: 1rem;
-  position:relative;
-  left:2px;
-  top:0px;
+  position: relative;
+  left: 2px;
+  top: 0px;
 }
 .boton_borrar:hover{
   background-color: white;
-  color:#4D4D4D;
-  border:1px solid #4D4D4D;
+  color: #4D4D4D;
+  border: 1px solid #4D4D4D;
 }
 
 /* ESTILO RUTAS */
 
 .rutas{
-  color:#393F0F;
+  color: #393F0F;
   padding-top: 50px;
   width: 100%;
   display: flex;
@@ -511,13 +511,13 @@ input[type="submit"]:hover{
   width:100%;
   display: flex;
   justify-content: center;
-  margin:15px auto 50px;
+  margin: 15px auto 50px;
   flex-wrap: wrap;
 }
 .mapa_ruta_corta{
   width: 600px;
   height: 388px;
-  background:url("../public/route_7km.gif") no-repeat center;
+  background: url("../public/route_7km.gif") no-repeat center;
   background-size: cover;
   border: 5px solid #393F0F;
 }
@@ -550,9 +550,9 @@ input[type="submit"]:hover{
 .error{
   width: 500px;
   height: 400px;
-  margin:50px auto 50px;
+  margin: 50px auto 50px;
   background-color: #393F0F;
-  position:relative;
+  position: relative;
   top: 10vh;
   display: flex;
   flex-direction: column;
@@ -560,7 +560,7 @@ input[type="submit"]:hover{
   align-items: center;
 }
 .error h2, .error h3{
-  color:white;
+  color: white;
   padding: 10;
 }
 .sad_dog{
@@ -583,9 +583,9 @@ input[type="submit"]:hover{
     font-size: 01.2rem;
   }
   .logo_inicio_pages{
-    height:70px;
-    top:5vh;
-    left:0px;
+    height: 70px;
+    top: 5vh;
+    left: 0px;
   }
   .carrera{
     flex-direction: column;
@@ -628,11 +628,11 @@ input[type="submit"]:hover{
  @media screen and (max-width:801px){
   .logo_inicio{
     height: 250px;
-    top:0vh;
+    top: 0vh;
   }
   .logo_inicio_pages{
-    height:66px;
-    left:-10px;
+    height: 66px;
+    left: -10px;
   }
   .enlaces_inicio{
     font-size: 1.7rem;
@@ -642,12 +642,12 @@ input[type="submit"]:hover{
     padding: 0px;
   }
   .enlace_inicio a{
-    bottom:90px;
-    left:105px;
+    bottom: 90px;
+    left: 105px;
   }
   .triangulo{
-    top:55px;
-    left:100px;
+    top: 55px;
+    left: 100px;
     border-bottom: 125px solid transparent;
     border-left: 250px solid #393F0F;
     border-top: 125px solid transparent;
@@ -657,14 +657,14 @@ input[type="submit"]:hover{
   }
   .enlace_header:first-child .triangulo_header{
     border-left: 150px solid #393F0F;
-    left:2px;
+    left: 2px;
   }
   .enlace_header:first-child a{
-    left:-148px;
+    left: -148px;
   }
   .lista_participantes{
     align-items: center;
-    margin:10px 50px 10px;
+    margin: 10px 50px 10px;
   }
   .rutas h3{
     font-size: 2rem;
@@ -689,15 +689,15 @@ input[type="submit"]:hover{
     font-size: 1rem;
   }
   .footer div:nth-child(1){
-    order:1;
+    order: 1;
   }
   .footer div:nth-child(3){
-    order:2;
+    order: 2;
   }
   .error{
     width: 400px;
     height: 300px;
-    margin:50px auto 50px;
+    margin: 50px auto 50px;
     top: 5vh;
   }
 }
@@ -707,11 +707,11 @@ input[type="submit"]:hover{
  @media screen and (max-width:501px){
   .logo_inicio{
     height: 90px;
-    top:1vh;
+    top: 1vh;
   }
   .logo_inicio_pages{
-    height:80px;
-    top:2vh;
+    height: 80px;
+    top: 2vh;
   }
   .enlaces_inicio{
     font-size: 1.2rem;
@@ -721,31 +721,31 @@ input[type="submit"]:hover{
     padding: 0px;
   }
   .enlace_inicio a{
-    bottom:37px;
-    left:120px;
+    bottom: 37px;
+    left: 120px;
   }
   .triangulo{
-    top:80px;
-    left:120px;
+    top: 80px;
+    left: 120px;
     border-bottom: 100px solid transparent;
     border-left: 200px solid #393F0F;
     border-top: 100px solid transparent;
   }
   .enlace_header{
-    margin-top:100px;
+    margin-top: 100px;
   }
   .enlaces_header a{
     font-size: 0.8rem;
   }
   .enlace_header:first-child .triangulo_header{
     border-left: 145px solid #393F0F;
-    left:76px;
+    left: 76px;
   }
   .enlace_header:first-child a{
-    left:-70px;
+    left: -70px;
   }
   .datos_persona,.datos_perro,.carrera{
-    margin:0px auto 0px;
+    margin: 0px auto 0px;
   }
   .datos_persona div{
     width: 300px;
@@ -757,7 +757,7 @@ input[type="submit"]:hover{
     padding: 14px;
   }
   input[type="submit"]{
-    width:300px;
+    width: 300px;
   }
   .logo{
     width: 214px;
@@ -765,7 +765,7 @@ input[type="submit"]:hover{
   }
   .lista_participantes{
     align-items: center;
-    margin:10px 20px 10px;
+    margin: 10px 20px 10px;
   }
   .lista_participantes h2{
     font-size: 1rem;
@@ -777,14 +777,14 @@ input[type="submit"]:hover{
     font-size: 0.7rem;
   }
   .arrow_1{
-    height:3rem;
-    width:3rem;
+    height: 3rem;
+    width: 3rem;
     background:url("../public/arrow.svg") no-repeat center;
     background-size: contain;
   }
   .arrow_2{
-    height:3rem;
-    width:3rem;
+    height: 3rem;
+    width: 3rem;
     background:url("../public/arrow.svg") no-repeat center;
     background-size: contain;
   }
@@ -797,10 +797,10 @@ input[type="submit"]:hover{
     font-size: 0.6rem;
   }
   .footer div:nth-child(1){
-    order:1;
+    order: 1;
   }
   .footer div:nth-child(3){
-    order:2;
+    order: 2;
   }
   .rutas h3{
     font-size: 2rem;
