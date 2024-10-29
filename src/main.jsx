@@ -16,11 +16,13 @@ const router = createBrowserRouter([
   {
     path: "/formulario",
     element : <App />,
+    redirect : '/formulario',
     errorElement : <Error />
   },
   {
     path: "/rutas",
     element : <Rutas />,
+    redirect : '/rutas',
     errorElement : <Error />
   }
 ])
