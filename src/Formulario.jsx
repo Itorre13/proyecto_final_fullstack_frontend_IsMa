@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Participante from './Participante.jsx';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
+import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 
 function Formulario({agregarParticipante}){
