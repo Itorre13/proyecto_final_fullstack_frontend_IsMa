@@ -1,6 +1,6 @@
-import Formulario from './Formulario';
-import Participante from './Participante';
-import { useState,useEffect } from 'react';
+import Formulario from './Formulario.jsx'
+import Participante from './Participante.jsx'
+import { useState,useEffect } from 'react'
 
 
 function App() {

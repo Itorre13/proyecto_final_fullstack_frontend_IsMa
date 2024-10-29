@@ -387,7 +387,6 @@ input[type="submit"]:hover{
 }
 .participante{
   background-color: #F1F7DE;
-  width: calc(100 - 50px);
   padding: 50px;
   font-size: 0.7rem;
   font-family: sans-serif;
@@ -561,7 +560,7 @@ input[type="submit"]:hover{
 }
 .error h2, .error h3{
   color: white;
-  padding: 10;
+  padding: 10px;
 }
 .sad_dog{
   width: 400px;

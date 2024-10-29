@@ -1,16 +1,12 @@
-import { useState } from 'react';
-import Participante from './Participante.jsx';
-import { Link } from 'react-router-dom';
-import Footer from './Footer.jsx';
-import Header from './Header.jsx';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Footer from './Footer.jsx'
+import Header from './Header.jsx'
 
 function Formulario({agregarParticipante}){
 
-    const input = document.querySelectorAll("input")
-
     const datosEnviados = document.querySelector(".modal_registro_datos")
     const datosError = document.querySelector(".modal_error_registro_datos")
-    const cerrar = document.querySelector(".boton_cerrar")
 
     let [textoTemporalNombre,setTextoTemporalNombre] = useState("")
     let [textoTemporalApellidos,setTextoTemporalApellidos] = useState("")
@@ -20,8 +16,6 @@ function Formulario({agregarParticipante}){
     let [textoTemporalRaza,setTextoTemporalRaza] = useState("-")
     let [inputCarrera,setInputCarrera] = useState("")
 
-
-    let [participante,setParticipante] = useState([])
 
     let regexNombre = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
     let regexApellidos = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/

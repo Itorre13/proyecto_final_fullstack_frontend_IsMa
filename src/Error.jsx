@@ -1,6 +1,6 @@
-import Footer from './Footer';
-import Header from './Header';
-import { Link } from 'react-router-dom';
+import Footer from './Footer.jsx'
+import Header from './Header.jsx'
+import { Link } from 'react-router-dom'
 
 function Error() {
  return(<>
