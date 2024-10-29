@@ -9,24 +9,26 @@ import './index.css'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path : "/",
     element : <Inicio />,
-    errorElement : <Error />
+    errorElement : <Error />,
+    children : [
+      {
+        path : "formulario",
+        element : <App />,
+        errorElement : <Error />
+      },
+      {
+        path : "rutas",
+        element : <Rutas />,
+        errorElement : <Error />
+      }
+    ]
   },
-  {
-    path: "/formulario",
-    element : <App />,
-    errorElement : <Error />
-  },
-  {
-    path: "/rutas",
-    element : <Rutas />,
-    errorElement : <Error />
-  }
-])
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={ router }/>
+    <RouterProvider router={ router } future={{ v7_startTransition: true }}/>
   </StrictMode>,
 )
