@@ -9,17 +9,17 @@ import './index.css'
 
 const router = createBrowserRouter([
   {
-    path : "/",
+    path: "/",
     element : <Inicio />,
     errorElement : <Error />
   },
   {
-    path : "/formulario",
+    path: "/formulario",
     element : <App />,
     errorElement : <Error />
   },
   {
-    path : "/rutas",
+    path: "/rutas",
     element : <Rutas />,
     errorElement : <Error />
   }
