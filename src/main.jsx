@@ -16,19 +16,17 @@ const router = createBrowserRouter([
   {
     path: "/formulario",
     element : <App />,
-    redirect : '/formulario',
     errorElement : <Error />
   },
   {
     path: "/rutas",
     element : <Rutas />,
-    redirect : '/rutas',
     errorElement : <Error />
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={ router }/>
+    <RouterProvider router={router}/>
   </StrictMode>,
 )
