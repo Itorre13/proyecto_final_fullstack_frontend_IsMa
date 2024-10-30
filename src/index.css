@@ -317,14 +317,13 @@ input[type="submit"]:hover{
   color: white;
   transition: color 300ms;
   cursor: pointer;
-  text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .boton_cerrar span, .boton_cerrar_error span{
   position: relative;
-  top: 9px;
+  top: 5px;
   left: 11px;
 }
 .boton_cerrar:hover, .boton_cerrar_error:hover{
@@ -755,8 +754,8 @@ input[type="submit"]:hover{
     font-size: 1rem;
   }
   .registro_datos{
-    width: 250px;
-    height: 120px;
+    width: 300px;
+    height: 150px;
   }
   .registro_datos h2{
     font-size: 1rem;
@@ -773,20 +772,12 @@ input[type="submit"]:hover{
   .boton_cerrar, .boton_cerrar_error{
     width: 25px;
     height: 25px;
-    border: 1px solid white;
-    background-color: #393F0F;
-    color: white;
-    transition: color 300ms;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-weight: 800;
     font-size: 1.1rem;
   }
   .boton_cerrar span, .boton_cerrar_error span{
     position: relative;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 6px;
   }
   .boton_cerrar:hover, .boton_cerrar_error:hover{
     color: #393F0F;
