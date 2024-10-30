@@ -140,7 +140,7 @@ function Formulario({agregarParticipante}){
                             datosEnviados.classList.remove("visible");
                         }
                     }>
-                    <span>x</span>
+                    <i className="fa-solid fa-xmark"></i>
                 </div>
                 <h2>INSCRITO/A</h2>
                 <p>Sus datos se han registrado correctamente</p>
@@ -154,7 +154,7 @@ function Formulario({agregarParticipante}){
                             datosError.classList.remove("visible")
                         }
                     }>
-                    <span>x</span>
+                    <i className="fa-solid fa-xmark"></i>
                 </div>
                 <h2>ERROR</h2>
                 <p>Revise que todos los datos introducidos estén correctos</p>

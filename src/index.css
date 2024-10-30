@@ -321,10 +321,10 @@ input[type="submit"]:hover{
   font-weight: 800;
   font-size: 1.8rem;
 }
-.boton_cerrar span, .boton_cerrar_error span{
+.fa-xmark{
   position: relative;
   top: 5px;
-  left: 11px;
+  left: 8px;
 }
 .boton_cerrar:hover, .boton_cerrar_error:hover{
   color: #393F0F;
@@ -754,7 +754,7 @@ input[type="submit"]:hover{
     font-size: 1rem;
   }
   .registro_datos{
-    width: 300px;
+    width: 250px;
     height: 150px;
   }
   .registro_datos h2{
@@ -774,10 +774,10 @@ input[type="submit"]:hover{
     height: 25px;
     font-size: 1.1rem;
   }
-  .boton_cerrar span, .boton_cerrar_error span{
+  .fa-xmark{
     position: relative;
     top: 3px;
-    left: 6px;
+    left: 5px;
   }
   .boton_cerrar:hover, .boton_cerrar_error:hover{
     color: #393F0F;
