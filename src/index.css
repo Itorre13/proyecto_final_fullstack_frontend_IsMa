@@ -24,43 +24,32 @@ ul{
 .enlaces_inicio{
   width: 100%;
   height: 100vh;
-  font-size: 2rem;
-  list-style: none;
+  font-size: 3rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 .enlace_inicio{
+  background-color: #393F0F;
+  border: 4px solid white;
+  box-shadow: 4px 5px 5px #4D4D4D;
+  border-radius: 10px;
   padding: 15px;
   z-index: 3;
 }
 .enlace_inicio a{
-  position: relative;
-  bottom: 98px;
-  left: 0px;
   color: white;
   cursor: pointer;
   text-decoration: none;
   padding: 5px;
 }
-.triangulo{
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 75px;
-  left: 0px;
-  border-bottom: 150px solid transparent;
-  border-left: 300px solid #393F0F;
-  border-top: 150px solid transparent;
-}
 .logo_inicio{
-  width: 75%;
-  height: 400px;
+  width: 100%;
+  height: 270px;
   position: fixed;
   top: 5vh;
-  left: 12%;
-  background: url("../public/logo_canicross_2.svg") no-repeat center;
+  background: url("../public/logo_canicross_1.svg") no-repeat center;
   background-size: auto;
   animation: FromLeft 1s ease;
 }
@@ -76,52 +65,37 @@ ul{
 
 .enlaces_header{
   width: 100%;
+  height: 104px;
+  font-size: 1.2rem;
   display: flex;
-  border-bottom: 10px solid white;
-  margin-bottom: 50px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 5px solid white;
+  background-color: rgba(255,255,255,0.6);
 }
 .enlace_header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto 10px;
-  width: 150px;
-  padding: 20px;
+  background-color: #393F0F;
+  border: 2px solid white;
+  box-shadow: 4px 5px 5px #4D4D4D;
+  border-radius: 10px;
+  padding: 15px;
   z-index: 3;
-  cursor: pointer;
 }
 .enlaces_header a{
-  position: relative;
-  bottom: 0px;
-  left: -48px;
   color: white;
   cursor: pointer;
   text-decoration: none;
   padding: 5px;
-  z-index:10;
 }
 .enlace_header:hover{
   animation: heartbeat 1s infinite;
 }
-.triangulo_header{
-  width: 25px;
-  height: 25px;
-  position: relative;
-  top: 0px;
-  left: 50px;
-  border-bottom: 50px solid transparent;
-  border-left: 100px solid #393F0F;
-  border-top: 50px solid transparent;
-}
-.enlace_header:first-child .triangulo_header{
-  border-left: 180px solid #393F0F;
-  left: 133px;
-}
 .logo_inicio_pages{
   width: 100%;
-  height: 100px;
+  height: 88px;
   position: absolute;
-  top: 3vh;
+  top: 16px;
   background: url("../public/logo_canicross_1.svg") no-repeat center;
   background-size: auto;
   animation: FromLeft 1s ease;
@@ -249,12 +223,14 @@ input[type="text"]{
   padding: 15px;
 }
 input[type="submit"]{
-  background-color: #393F0F;
+  background-color: #4D4D4D;
   color: white;
   border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 4px 5px 5px #4D4D4D;
   padding: 15px;
   margin: 20px auto 20px;
-  width: 400px;
+  width: 310px;
   font-family: "Bungee", sans-serif;
   font-size: 1.2rem;
 }
@@ -403,7 +379,7 @@ input[type="submit"]:hover{
 .nombre_perro{
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .participante h2,.participante input{
   font-size: 1.1rem;
@@ -424,6 +400,7 @@ input[type="submit"]:hover{
 }
 .participante input{
   border-bottom: 1px dashed #4D4D4D;
+  border: 0.5px solid #4D4D4D
 }
 .botones{
   display: flex;
@@ -574,17 +551,12 @@ input[type="submit"]:hover{
 /* ESTILOS PANTALLAS HASTA 1.301px */
  
  @media screen and (max-width:1301px){
-  .enlace_header{
-    width: 180px;
-    padding: 10px;
-  }
-  .enlaces_header a{
-    font-size: 01.2rem;
-  }
   .logo_inicio_pages{
-    height: 70px;
-    top: 5vh;
-    left: 0px;
+    height: 80px;
+    top: 16px;
+  }
+  .enlaces_header{
+    font-size: 0.9rem;
   }
   .carrera{
     flex-direction: column;
@@ -626,44 +598,58 @@ input[type="submit"]:hover{
 
  @media screen and (max-width:801px){
   .logo_inicio{
-    height: 250px;
-    top: 0vh;
+    height: 170px;
+    top: 6vh;
   }
   .logo_inicio_pages{
-    height: 66px;
-    left: -10px;
+    height: 80px;
+    top: 16px;
   }
   .enlaces_inicio{
     font-size: 1.7rem;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
+  }
+  .enlace_inicio:last-child{
+    margin-top:20px;
   }
   .enlace_inicio a{
     bottom: 90px;
     left: 105px;
   }
-  .triangulo{
-    top: 55px;
-    left: 100px;
-    border-bottom: 125px solid transparent;
-    border-left: 250px solid #393F0F;
-    border-top: 125px solid transparent;
-  }
-  .enlaces_header a{
+  .enlaces_header{
+    height: 180px;
     font-size: 0.8rem;
   }
-  .enlace_header:first-child .triangulo_header{
-    border-left: 150px solid #393F0F;
-    left: 2px;
-  }
-  .enlace_header:first-child a{
-    left: -148px;
+  .enlace_header{
+    margin-top: 100px;
+    padding: 10px;
   }
   .lista_participantes{
     align-items: center;
     margin: 10px 50px 10px;
+  }
+  .participante{
+    padding: 45px;
+  }
+  .participante h2{
+    font-size: 0.9rem;
+  }
+  .participante h3{
+    font-size: 0.7rem;
+  }
+  .participante input{
+    font-size: 0.8rem;
+    border-radius: 8px;
+    border: 0.5px solid #4D4D4D
+  }
+  input[type="text"]{
+    padding: 8px;
+  }
+  .boton_editar span, .boton_borrar span {
+    font-size: 0.8rem;
   }
   .rutas h3{
     font-size: 2rem;
@@ -706,7 +692,7 @@ input[type="submit"]:hover{
  @media screen and (max-width:501px){
   .logo_inicio{
     height: 90px;
-    top: 1vh;
+    top: 100px;
   }
   .logo_inicio_pages{
     height: 80px;
@@ -714,34 +700,21 @@ input[type="submit"]:hover{
   }
   .enlaces_inicio{
     font-size: 1.2rem;
-    height: 90vh;
+    height: 100vh;
   }
   .enlace_inicio{
-    padding: 0px;
+    padding: 10px;
+    border: 0.5px solid white;
   }
   .enlace_inicio a{
     bottom: 37px;
     left: 120px;
   }
-  .triangulo{
-    top: 80px;
-    left: 120px;
-    border-bottom: 100px solid transparent;
-    border-left: 200px solid #393F0F;
-    border-top: 100px solid transparent;
-  }
   .enlace_header{
-    margin-top: 100px;
-  }
-  .enlaces_header a{
     font-size: 0.8rem;
-  }
-  .enlace_header:first-child .triangulo_header{
-    border-left: 145px solid #393F0F;
-    left: 76px;
-  }
-  .enlace_header:first-child a{
-    left: -70px;
+    border: 0.5px solid white;
+    box-shadow: 2px 3px 3px #4D4D4D;
+    padding: 8px;
   }
   .datos_persona,.datos_perro,.carrera{
     margin: 0px auto 0px;
@@ -756,24 +729,11 @@ input[type="submit"]:hover{
     padding: 14px;
   }
   input[type="submit"]{
-    width: 300px;
+    width: 200px;
   }
   .logo{
     width: 214px;
     height: 142px;
-  }
-  .lista_participantes{
-    align-items: center;
-    margin: 10px 20px 10px;
-  }
-  .lista_participantes h2{
-    font-size: 1rem;
-  }
-  .participante h2{
-    font-size: 0.9rem;
-  }
-  .participante h3{
-    font-size: 0.7rem;
   }
   .arrow_1{
     height: 3rem;
@@ -786,6 +746,72 @@ input[type="submit"]:hover{
     width: 3rem;
     background:url("../public/arrow.svg") no-repeat center;
     background-size: contain;
+  }
+  .lista_participantes{
+    align-items: center;
+    margin: 10px 20px 10px;
+  }
+  .lista_participantes h2{
+    font-size: 1rem;
+  }
+  .participante{
+    padding: 20px;
+  }
+  .nombre_participante{
+    padding-bottom: 2px;
+  }
+  .nombre_perro{
+    margin-top: 8px;
+  }
+  .participante h2{
+    font-size: 0.8rem;
+  }
+  .participante h3{
+    font-size: 0.6rem;
+  }
+  .participante input{
+    font-size: 0.6rem;
+    border-radius: 4px;
+    border: 0.5px solid #4D4D4D
+  }
+  input[type="text"]{
+    padding: 6px;
+  }
+  .boton_editar{ 
+    width: 23px;
+    height: 26px;
+  }
+  .boton_editar span, .boton_borrar span{
+    font-family: sans-serif;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    left: -1.5rem;
+    top: 1.8rem;
+    opacity: 0;
+  }
+  .fa-pen-to-square{
+    font-size: 0.9rem;
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .fa-floppy-disk{
+    font-size: 0.9rem;
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+  .boton_borrar{
+    width: 23px;
+    height: 26px;
+  }
+  .fa-trash-can{
+    font-size: 0.9rem;
+    position: relative;
+    left: 0px;
+    top: 0px;
   }
   .footer{
     height: 7vh;

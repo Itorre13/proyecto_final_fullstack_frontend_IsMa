@@ -9,11 +9,9 @@ function Inicio() {
             <nav>
                     <ul className="enlaces_inicio">
                         <li className="enlace_inicio">
-                            <div className="triangulo"></div>
                             <Link to="/formulario">inscripción</Link>
                         </li>
                         <li className="enlace_inicio">
-                            <div className="triangulo"></div>
                             <Link to="/rutas">rutas</Link>
                         </li>
                     </ul>
