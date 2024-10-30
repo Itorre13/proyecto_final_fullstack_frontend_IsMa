@@ -275,8 +275,8 @@ input[type="submit"]:hover{
   z-index: 5;
 }
 .registro_datos{
-  width: 100%;
-  max-width: 450px;
+  width: 450px;
+  height: 220px;
   padding: 20px;
   background-color: #393F0F;
   display: flex;
@@ -754,6 +754,44 @@ input[type="submit"]:hover{
   .lista_participantes h2{
     font-size: 1rem;
   }
+  .registro_datos{
+    width: 250px;
+    height: 120px;
+  }
+  .registro_datos h2{
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .registro_datos p:nth-child(3){
+    font-size: 0.8rem;
+    padding: 10px 0px;
+  }
+  .registro_datos p:nth-child(4){
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+  .boton_cerrar, .boton_cerrar_error{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    background-color: #393F0F;
+    color: white;
+    transition: color 300ms;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .boton_cerrar span, .boton_cerrar_error span{
+    position: relative;
+    top: 5px;
+    left: 5px;
+  }
+  .boton_cerrar:hover, .boton_cerrar_error:hover{
+    color: #393F0F;
+    background-color: white;
+  }
   .participante{
     padding: 20px;
   }
@@ -761,7 +799,7 @@ input[type="submit"]:hover{
     padding-bottom: 2px;
   }
   .nombre_perro{
-    margin-top: 8px;
+    margin-top: 4px;
   }
   .participante h2{
     font-size: 0.8rem;
@@ -781,14 +819,7 @@ input[type="submit"]:hover{
     width: 23px;
     height: 26px;
   }
-  .boton_editar span, .boton_borrar span{
-    font-family: sans-serif;
-    color: #4D4D4D;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative;
-    left: -1.5rem;
-    top: 1.8rem;
+  .boton_editar:hover span, .boton_borrar:hover span{
     opacity: 0;
   }
   .fa-pen-to-square{

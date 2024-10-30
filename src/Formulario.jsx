@@ -86,7 +86,7 @@ function Formulario({agregarParticipante}){
                                     <input type="text" placeholder="email@mail.com" value={textoTemporalEmail} onChange={ evento => setTextoTemporalEmail(evento.target.value) }></input>
                                 </div>
                                 <div>
-                                    <span>teléfono</span>
+                                    <span>Teléfono</span>
                                     <input type="text" placeholder="sin espacios, ni guiones" value={textoTemporalTelefono} onChange={ evento => setTextoTemporalTelefono(evento.target.value) }></input>
                                 </div>
                             </section>
@@ -151,14 +151,13 @@ function Formulario({agregarParticipante}){
             <div className="registro_datos">
                 <div className="boton_cerrar_error" onClick={ evento => {
                             evento.preventDefault()
-                            
                             datosError.classList.remove("visible")
                         }
                     }>
                     <span>x</span>
                 </div>
                 <h2>ERROR</h2>
-                <p>Revise que todos los datos introducidos<br></br>estén correctos</p>
+                <p>Revise que todos los datos introducidos estén correctos</p>
             </div>
             </section>
             <Footer />
