@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function Header(){
+function Header(){ // Función que retorna un menú de navegación con los enlaces a las páginas de inscripción y rutas
 
     return(<>
             <nav>

@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
-function Formulario({agregarParticipante}){
+function Formulario({agregarParticipante}){ // Función con el formulario para introducir los datos pasándole agregarParticipante que es la función para añadir un participante.
+
+    // Constantes para crear las ventanas modales que aparecerán al introducir los datos en el formulario e inscribirse
 
     const datosEnviados = document.querySelector(".modal_registro_datos")
     const datosError = document.querySelector(".modal_error_registro_datos")
+
+    // Variables de estado para cada uno de los campos. Inicialmente están vacías
 
     let [textoTemporalNombre,setTextoTemporalNombre] = useState("")
     let [textoTemporalApellidos,setTextoTemporalApellidos] = useState("")
@@ -16,6 +20,7 @@ function Formulario({agregarParticipante}){
     let [textoTemporalRaza,setTextoTemporalRaza] = useState("-")
     let [inputCarrera,setInputCarrera] = useState("")
 
+    // Variables con cada una de las expresiones regulares para los campos. Para que el texto introducido sea una determinada combinación de caracteres.
 
     let regexNombre = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
     let regexApellidos = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
@@ -24,6 +29,8 @@ function Formulario({agregarParticipante}){
     let regexNombrePerro = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
     let regexRaza = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
 
+    // Esta función retornará un enlace a la página inicio, un background, el header, el formulario con cada uno de los inputs con los campos y la llamada a la base de datos para agregar un participante. También retorna las ventanas modales a las que se le añade la clase visible para mostrarlas y por último el footer
+    
     return (<>
             <a href="/"><div className="logo_inicio_pages"></div></a>
             <section className="background_datos">

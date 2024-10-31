@@ -1,7 +1,7 @@
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
-function Rutas() {
+function Rutas() { // Función que retorna el enlace a la página de inicio, el header, un div con las rutas (titulo,gif y perfil de ruta) y por último el footer
     return(<>
         <a href="/"><div className="logo_inicio_pages"></div></a>
         <section className="background">

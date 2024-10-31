@@ -1,4 +1,4 @@
-function Footer(){
+function Footer(){ // Función que nos devuelve un div con la información básica de la organización. Incluye los enlaces a su email y al teléfono
     return(<>
             <div className="footer">
             <div>

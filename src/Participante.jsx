@@ -1,6 +1,8 @@
 import { useState } from 'react'
 
-function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,actualizarParticipante,borrarParticipante}){
+function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,actualizarParticipante,borrarParticipante}){ // Función con la sección con los participantes, pasándole cada uno de los campos del participante más las funciones actualizar y borrar.
+
+        // Varibales de estado para cuando  los campos están siendo editados. Inicialmente serán false porque no están siendo editados
 
         let [editandoNombre,setEditandoNombre] = useState(false)
         let [editandoApellidos,setEditandoApellidos] = useState(false)
@@ -10,6 +12,8 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let [editandoRaza,setEditandoRaza] = useState(false)
         let [editandoCarrera,setEditandoCarrera] = useState(false)
 
+        // Variables de estado con el texto de cada participante. Inicialmente tendrá el valor de cada uno de los campos de la base de datos
+
         let [textoTemporalNombre,setTextoTemporalNombre] = useState(nombre)
         let [textoTemporalApellidos,setTextoTemporalApellidos] = useState(apellidos)
         let [textoTemporalEmail,setTextoTemporalEmail] = useState(email)
@@ -17,6 +21,8 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let [textoTemporalNombrePerro,setTextoTemporalNombrePerro] = useState(perro)
         let [textoTemporalRaza,setTextoTemporalRaza] = useState(raza)
         let [inputCarrera,setInputCarrera] = useState(carrera)
+
+        // Variables con cada una de las expresiones regulares para los campos. Para que el texto introducido sea una determinada combinación de caracteres.
 
         let regexNombre = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
         let regexApellidos = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?( [A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
@@ -26,7 +32,7 @@ function Participante({id,nombre,apellidos,email,telefono,perro,raza,carrera,act
         let regexRaza = /^[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?(( |\-)[A-ZÀÈÌÒÙÑ][a-záéíóúñ]+)?$/
         let regexCarrera = /^(corta|larga)$/
 
-        
+        // Retorna una sección participante con dos div. Un div nombre_participante con los textos con la información que le pasamos en nombre, apellidos, email y teléfono y con sus respectivos inputs cuando estemos editando. Otro div nombre_perr con los textos con la información que le pasamos en nombrePerro, raza y carrera y con sus respectivos inputs cuando estemos editando. Depués tendremos dos botones, el primero para editar con la llamada a la base de datos para actualizar el participante. Y el segundo botón borrar con la llamada a la base de datos para borrar al participante, pasándole el id
 
     return(<section className="participante">
                 <div className="nombre_participante">
